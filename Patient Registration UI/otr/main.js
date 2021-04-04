@@ -1,4 +1,4 @@
-function setFormMessage(formElement, type, message) { 
+function setFormMessage(formElement, type, message) {
     const messageElement = formElement.querySelector(".form__message");
 
     messageElement.textContent = message;
@@ -22,14 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const createAccountForm = document.querySelector("#createAccount"); //page for creating an account
     const forgotForm = document.querySelector("#forgot"); //page for the login
     const confirmationForm = document.querySelector("#confirmation"); //page for confirming inputted personal information
-    /*const loginForm = document.querySelector("#confirm-button"); 
-    const createAccountForm = document.querySelector("#back-button");*/
     var password = document.getElementById("signupUsername-password").value;
-
-/*document.addEventListener("DOMContentLoaded", () => {
-    const confirmationForm = document.querySelector("#confirmation") //page where the user needs to confirm the inputted data
-    const loginForm = document.querySelector("#login"); //page for the login
-    const createAccountForm = document.querySelector("#createAccount"); //page for creating an account*/
+    var resetpassword = document.getElementById("resetPassword").value;
+    var number = /^[0-9]+$/;
 
     document.querySelector("#linkCreateAccount").addEventListener("click", e => { //Creation of account
         e.preventDefault(); //prevents loading the default page
@@ -38,25 +33,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.querySelector("#linkLogin").addEventListener("click", e => { //when in create account page but users already have an existing account
-        e.preventDefault(); 
+        e.preventDefault();
         loginForm.classList.remove("form--hidden"); //shows the login page
-        createAccountForm.classList.add("form--hidden");//do not show the create account page
-        forgotForm.classList.add("form--hidden");//do not show the create account page
+        createAccountForm.classList.add("form--hidden"); //do not show the create account page
+        forgotForm.classList.add("form--hidden"); //do not show the create account page
     });
 
     document.querySelector("#linkForgot").addEventListener("click", e => { //when in create account page but users already have an existing account
-        e.preventDefault(); 
+        e.preventDefault();
         loginForm.classList.add("form--hidden"); //shows the login page
-        forgotForm.classList.remove("form--hidden");//do not show the create account page
+        forgotForm.classList.remove("form--hidden"); //do not show the create account page
     });
 
-    document.querySelector("#linkWelcome").addEventListener("click", e =>{
+    document.querySelector("#linkWelcome").addEventListener("click", e => {
         e.preventDefault();
         welcomeForm.classList.add("form--hidden");
         loginForm.classList.remove("form--hidden");
     });
 
-     document.querySelector("#linkConfirmation").addEventListener("click", e => { 
+    document.querySelector("#linkConfirmation").addEventListener("click", e => {
         e.preventDefault(); //prevents loading the default page
         createAccountForm.classList.add("form--hidden"); //do not show the  page
         confirmationForm.classList.remove("form--hidden"); //shows the confirmation page in the website
@@ -80,19 +75,19 @@ document.addEventListener("DOMContentLoaded", () => {
         setFormMessage(loginForm, "error", "Invalid username/password combination");
     });
 
-  
+
     document.querySelectorAll(".form__input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
-            if ((e.target.id === "signupUsername" || e.target.id == "signupUsername-age" ||  e.target.id == "signupUsername-contact" ||  e.target.id == "signupUsername-password" ||  e.target.id == "signupUsername-confirm") && e.target.value.length == 0) {
+            if ((e.target.id === "signupUsername" || e.target.id == "signupUsername-age" || e.target.id == "signupUsername-contact" || e.target.id == "signupUsername-password" || e.target.id == "signupUsername-confirm") && e.target.value.length == 0) {
                 setInputError(inputElement, "Do not leave field empty.");
             }
-            if(e.target.id === "signupUsername-confirm" && e.target.value != password){
+            if ((e.target.id === "signupUsername-confirm" && e.target.value != password) || (e.target.id === "resetConfirm" && e.target.value != resetpassword)) {
                 setInputError(inputElement, "Password do not Match");
             }
-            if(e.target.id === "signupUsername-contact" && (e.target.value != 46 && e.target.value > 31 && (e.target.value < 48 || e.target.value > 57))==false){
+            if (e.target.id === "signupUsername-contact" && (e.target.value.match(number) == false)) {
                 setInputError(inputElement, "Contact number is invalid.")
             }
-            if(e.target.id === "signupUsername-age" && (e.target.value != 46 && e.target.value > 31)==false){
+            if (e.target.id === "signupUsername-age" && (e.target.value.match(number) == false)) {
                 setInputError(inputElement, "Please enter numeric value.")
             }
         });
@@ -101,16 +96,14 @@ document.addEventListener("DOMContentLoaded", () => {
             clearInputError(inputElement);
         });
     });
+
 });
 
-function disagree(){
-  alert("Sorry! You can't proceed using the app. Please Agree to our terms and conditions.")
+function disagree() {
+    alert("Sorry! You can't proceed using the app.")
 }
 
-function resetpw(){
-  alert("Password is changed successfully.")
+function resetpw() {
+    alert("Password is changed successfully.")
 }
 
-/*function successful(){
-  alert("Your account has been successfully made.")
-}*/
