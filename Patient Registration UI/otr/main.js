@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function disagree(){
-  alert("Sorry! You can't proceed using the app.")
+  alert("Sorry! You can't proceed using the app. Please Agree to our terms and conditions.")
 }
 
 function resetpw(){
