@@ -1,9 +1,9 @@
 body {
-    --color-primary: #a314db;
-    --color-primary-dark: #5c09aa;
-    --color-secondary: #252c6a;
-    --color-error: #a314db;
-    --color-success: #6f44b5;
+    --color-primary: #155fe7;
+    --color-primary-dark: #14247c;
+    --color-secondary: #6f197a;
+    --color-error: #fc0404;
+    --color-success: #15fc00;
     --border-radius: 4px;
     margin: 0;
     height: 100vh;
