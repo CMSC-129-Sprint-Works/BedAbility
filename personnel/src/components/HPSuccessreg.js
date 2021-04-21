@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import {Form} from 'react-bootstrap';
 import Button from '@material-ui/core/Button';
+import { MDBBtn } from 'mdb-react-ui-kit';*/
 
-import { MDBBtn } from 'mdb-react-ui-kit';
-
+import React, { Component } from 'react';
+import {ThemeProvider as MuiThemeProvider, Form, Button} from 'react-bootstrap';
 
 export class HPSuccessreg extends Component {
   
@@ -25,12 +26,10 @@ export class HPSuccessreg extends Component {
             <p>Thank you for Registering. Please Login</p>
 
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <MDBBtn>
               <Button
                 color="Secondary"
                 onClick={this.continue}
                 >PROCEED TO LOGIN</Button>
-              </MDBBtn>
             </div>
         </Form>  
         

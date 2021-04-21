@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import {Form} from 'react-bootstrap';
-import { MDBBtn } from 'mdb-react-ui-kit';
+import {Form, Container} from 'react-bootstrap';
+import { MDBBtn } from 'mdb-react-ui-kit';*/
+import React, { Component } from 'react';
+import {ThemeProvider as MuiThemeProvider, Form, Button, Container} from 'react-bootstrap';
 
 export class HPLogin extends Component {
   continue = e => {
@@ -13,12 +15,15 @@ export class HPLogin extends Component {
   render() {
     const { values, handleChange } = this.props;
     return (
+      <Container className = "App-container">
       <MuiThemeProvider>
         <>
+       
         <br/>
         <br/>
-        <h1>Welcome to BedAbility! Please Login</h1>
-        <Form style={{width:"80%", marginLeft:"0%", marginTop:"10%"}}>
+        <h1 className = "App-welcome">Welcome to BedAbility!</h1>
+        <p className = "App-title">Please Login</p>
+        <Form style={{width:"80%", marginLeft:"0%", marginTop:"5%", marginRight:"10%"}}>
             <Form.Control
               placeholder="Enter Username" 
               label="Username" 
@@ -31,6 +36,7 @@ export class HPLogin extends Component {
             <Form.Control
               placeholder="Enter Password"
               label="Password" 
+              type="password"
               onChange={handleChange('passWord')} 
               defaultValue={values.passWord}
               margin="normal"
@@ -38,28 +44,21 @@ export class HPLogin extends Component {
             />
             <br />
             <div class="d-grid gap-2 col-6 mx-auto">
-               <MDBBtn>
-                <Button
-                color="black"
-                type="Submit">LOGIN
-              </Button>
-              </MDBBtn>
+                        <Button className = "App-button" color="black" type="Submit">
+                            LOGIN
+                        </Button>
             </div>
             <br />
-            <h5>Dont have an account?, Create and Register an Account</h5>
             <br />
-            <div className = "App-button">
-                <Button  variant="link" onClick={this.continue}>
-                  Forget your password?
-                </Button>
-                <br/>
-                <Button color="black" variant="link" onClick={this.continue}>
+           <div className = "App-button">
+              <Button color="black" variant="link" onClick={this.continue}>
                   Don't have an account? Create Account
-                </Button>
-            </div> 
+              </Button>
+          </div> 
         </Form>
         </>
       </MuiThemeProvider>
+      </Container>
     );
   }
 }

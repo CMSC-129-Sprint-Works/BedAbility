@@ -1,8 +1,12 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import {Form} from 'react-bootstrap';
-import { MDBBtn } from 'mdb-react-ui-kit';
+import { MDBBtn } from 'mdb-react-ui-kit';*/
+
+import React, { Component } from 'react';
+import {ThemeProvider as MuiThemeProvider, Form, Button} from 'react-bootstrap';
+
 
 export class HPRegister extends Component {
   continue = e => {
@@ -44,15 +48,6 @@ export class HPRegister extends Component {
             />
             <br />
             <Form.Control
-              placeholder="Enter Your Complete Address"
-              label="Address"
-              onChange={handleChange('address')} 
-              defaultValue={values.address}
-              margin="normal"
-              fullWidth
-            />
-            <br />
-            <Form.Control
               placeholder="Enter your Position / Occupation"
               label="Position"
               onChange={handleChange('position')} 
@@ -70,6 +65,15 @@ export class HPRegister extends Component {
               fullWidth
             />
              <br />
+                <Form.Control
+              placeholder="Enter Your Email Address"
+              label="Address"
+              onChange={handleChange('address')} 
+              defaultValue={values.address}
+              margin="normal"
+              fullWidth
+            />
+            <br />
             <Form.Control
               placeholder="Enter your Password"
               label="Password"
@@ -89,19 +93,14 @@ export class HPRegister extends Component {
             />
              <br />
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <MDBBtn>
               <Button
                 color="Secondary"
                 onClick={this.back}
                 >CANCEL</Button>
-              </MDBBtn>
-              <MDBBtn>
                <Button
-                color="primary"
+                color="Primary"
                 onClick={this.continue}
                 >CONTINUE</Button>
-              </MDBBtn>
-              
             </div>
         </Form>  
         </>
