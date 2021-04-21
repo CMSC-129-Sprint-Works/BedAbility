@@ -3,6 +3,7 @@ import HPLogin from './HPLogin'; //  login
 import HPRegister from './HPRegister'; // register
 import HPConfirm from './HPConfirm'; // confirm
 import HPSuccessreg from './HPSuccessreg'; // successfl message 
+//import DataSharing from './DataSharing';
 
 export class UserForm extends Component {
   state = {
@@ -67,6 +68,7 @@ export class UserForm extends Component {
             values={values}
           />
         );
+     
       case 4:
         return (
         <HPSuccessreg
@@ -84,3 +86,13 @@ export class UserForm extends Component {
 }
 
 export default UserForm;
+/*
+ case 4:
+        return (
+        <DataSharing
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            values={values}
+          />
+        );
+*/

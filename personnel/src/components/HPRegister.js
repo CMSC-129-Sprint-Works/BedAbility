@@ -26,7 +26,7 @@ export class HPRegister extends Component {
         <>
         <br/>
         <br/>
-        <h1>Create an Account: Please Fill-up</h1>
+        <h3>Create an Account: Please Fill-up</h3>
         <Form style={{width:"80%", marginLeft:"0%", marginTop:"0%"}}>
             <br/>
             <Form.Control

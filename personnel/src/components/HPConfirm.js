@@ -11,6 +11,16 @@ import { List, ListItem, ListItemText } from '@material-ui/core/';
 
 
 export class HPConfirm extends Component {
+
+  constructor(){
+    super();
+    this.state = {checked: ' '};
+  }
+
+  txtChange(e){
+    this.setState({input : e.target.checked});
+  }
+
   continue = e => {
     e.preventDefault();
     // PROCESS FORM //
@@ -22,6 +32,11 @@ export class HPConfirm extends Component {
     this.props.prevStep();
   };
 
+  alert = e => {
+   datashare();
+  };
+
+
   render() {
     const {
       values: { userName, passWord, fullName, address, position, age }
@@ -30,7 +45,7 @@ export class HPConfirm extends Component {
       <MuiThemeProvider>
         <>
         <br/>
-        <h1>Please Review and Confirm to Register</h1>
+        <h3>Please Review and Confirm to Register</h3>
         <Form style={{width:"80%", marginLeft:"0%", marginTop:"0%"}}>
             <List>
               <ListItem>
@@ -52,16 +67,24 @@ export class HPConfirm extends Component {
                 <ListItemText primary="Password" secondary={passWord} />
               </ListItem>
             </List>
-             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+            <Button color="black" variant="link" onClick={this.alert}>
+                 To proceed with your regsitration, please read and agree to the Data Sharing Aggreement
+              </Button>
+            <input type="checkbox" onChange = {this.txtChange.bind(this)}/>
+            <em> I Agree to the Data Sharing Agreement</em>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
               <Button
                 color="Secondary"
                 onClick={this.back}
                 >CANCEL</Button>
-               <Button
+               <Button disabled = {!this.state.input}
                 color="primary"
                 onClick={this.continue}
                 >CONTINUE</Button>
             </div>
+           
+           
         </Form>  
         </>
       </MuiThemeProvider>
@@ -70,3 +93,7 @@ export class HPConfirm extends Component {
 }
 
 export default HPConfirm;
+
+function datashare() {
+    alert("This is the Data Sharing Agreement")
+}
