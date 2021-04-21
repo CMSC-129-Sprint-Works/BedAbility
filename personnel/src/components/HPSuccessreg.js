@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-//import Dialog from '@material-ui/core/Dialog';
-//import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import {Form} from 'react-bootstrap';
 import Button from '@material-ui/core/Button';
@@ -8,31 +6,13 @@ import Button from '@material-ui/core/Button';
 import { MDBBtn } from 'mdb-react-ui-kit';
 
 
-export class Success extends Component {
+export class HPSuccessreg extends Component {
   
   continue = e => {
     e.preventDefault();
     this.props.nextStep();
   };
 
- /*
-  render() {
-    return (
-      <MuiThemeProvider>
-        <>
-          <Dialog
-            open
-            fullWidth
-            maxWidth='sm'
-          >
-            <AppBar title="Success" />
-            <h1>Thank You For Your Submission</h1>
-            <p>You will get an email with further instructions.</p>
-          </Dialog>
-        </>
-      </MuiThemeProvider>
-    );
-  }*/
   render() {
       return (
       <MuiThemeProvider>
@@ -59,4 +39,4 @@ export class Success extends Component {
 }
 }
 
-export default Success;
+export default HPSuccessreg;

@@ -1,8 +1,7 @@
-
 import React from 'react';
 import {Image} from "react-bootstrap";
 
-const RightSide = () => {
+const LeftSide = () => {
     return (
         <div>
            <Image src="./img/bg.jpg" thumbnail style={{border:"none"}} /> 
@@ -10,4 +9,4 @@ const RightSide = () => {
     )
 }
 
-export default RightSide;
+export default LeftSide;

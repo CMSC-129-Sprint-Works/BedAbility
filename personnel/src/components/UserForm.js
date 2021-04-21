@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import FormUserDetails from './FormUserDetails'; //  login
-import FormPersonalDetails from './FormPersonalDetails'; // register
-import Confirm from './Confirm'; // confirm
-import Success from './Success'; // successfl message 
+import HPLogin from './HPLogin'; //  login
+import HPRegister from './HPRegister'; // register
+import HPConfirm from './HPConfirm'; // confirm
+import HPSuccessreg from './HPSuccessreg'; // successfl message 
 
 export class UserForm extends Component {
   state = {
@@ -44,7 +44,7 @@ export class UserForm extends Component {
     switch (step) {
       case 1:
         return (
-          <FormUserDetails
+          <HPLogin
             nextStep={this.nextStep}
             handleChange={this.handleChange}
             values={values}
@@ -52,7 +52,7 @@ export class UserForm extends Component {
         );
       case 2:
         return (
-          <FormPersonalDetails
+          <HPRegister
             nextStep={this.nextStep}
             prevStep={this.prevStep}
             handleChange={this.handleChange}
@@ -61,7 +61,7 @@ export class UserForm extends Component {
         );
       case 3:
         return (
-          <Confirm
+          <HPConfirm
             nextStep={this.nextStep}
             prevStep={this.prevStep}
             values={values}
@@ -69,7 +69,7 @@ export class UserForm extends Component {
         );
       case 4:
         return (
-        <Success
+        <HPSuccessreg
             nextStep={this.nextStep}
             values={values}
           />

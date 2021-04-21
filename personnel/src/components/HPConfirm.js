@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-//import Dialog from '@material-ui/core/Dialog';
-//import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { List, ListItem, ListItemText } from '@material-ui/core/';
 import Button from '@material-ui/core/Button';
 import {Form} from 'react-bootstrap';
 import { MDBBtn } from 'mdb-react-ui-kit';
 
-export class Confirm extends Component {
+export class HPConfirm extends Component {
   continue = e => {
     e.preventDefault();
     // PROCESS FORM //
@@ -71,4 +69,4 @@ export class Confirm extends Component {
   }
 }
 
-export default Confirm;
+export default HPConfirm;

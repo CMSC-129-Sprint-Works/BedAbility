@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-//import Dialog from '@material-ui/core/Dialog';
-//import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-//import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import {Form} from 'react-bootstrap';
 import { MDBBtn } from 'mdb-react-ui-kit';
 
-export class FormPersonalDetails extends Component {
+export class HPRegister extends Component {
   continue = e => {
     e.preventDefault();
     this.props.nextStep();
@@ -30,8 +27,8 @@ export class FormPersonalDetails extends Component {
             <br/>
             <Form.Control
               placeholder="Enter Your Full Name" 
-              label="Full Name" //Occupation
-              onChange={handleChange('fullName')} //occupation
+              label="Full Name" 
+              onChange={handleChange('fullName')} 
               defaultValue={values.fullName}
               margin="normal"
               fullWidth
@@ -40,7 +37,7 @@ export class FormPersonalDetails extends Component {
             <Form.Control
               placeholder="Enter your Age"
               label="Age"
-              onChange={handleChange('age')} //city
+              onChange={handleChange('age')} 
               defaultValue={values.age}
               margin="normal"
               fullWidth
@@ -49,7 +46,7 @@ export class FormPersonalDetails extends Component {
             <Form.Control
               placeholder="Enter Your Complete Address"
               label="Address"
-              onChange={handleChange('address')} //bio
+              onChange={handleChange('address')} 
               defaultValue={values.address}
               margin="normal"
               fullWidth
@@ -58,7 +55,7 @@ export class FormPersonalDetails extends Component {
             <Form.Control
               placeholder="Enter your Position / Occupation"
               label="Position"
-              onChange={handleChange('position')} //bio
+              onChange={handleChange('position')} 
               defaultValue={values.position}
               margin="normal"
               fullWidth
@@ -67,7 +64,7 @@ export class FormPersonalDetails extends Component {
              <Form.Control
               placeholder="Enter your UserName"
               label="UserName"
-              onChange={handleChange('userName')} //bio
+              onChange={handleChange('userName')} 
               defaultValue={values.userName}
               margin="normal"
               fullWidth
@@ -76,7 +73,7 @@ export class FormPersonalDetails extends Component {
             <Form.Control
               placeholder="Enter your Password"
               label="Password"
-              onChange={handleChange('passWord')} //bio
+              onChange={handleChange('passWord')} 
               defaultValue={values.passWord}
               margin="normal"
               fullWidth
@@ -85,7 +82,7 @@ export class FormPersonalDetails extends Component {
              <Form.Control
               placeholder="Re-Enter your Password"
               label="RePassword"
-              onChange={handleChange('repassWord')} //bio
+              onChange={handleChange('repassWord')} 
               defaultValue={values.repassWord}
               margin="normal"
               fullWidth
@@ -113,4 +110,4 @@ export class FormPersonalDetails extends Component {
   }
 }
 
-export default FormPersonalDetails;
+export default HPRegister;

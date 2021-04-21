@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-//import Dialog from '@material-ui/core/Dialog';
-//import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-//import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import {Form} from 'react-bootstrap';
 import { MDBBtn } from 'mdb-react-ui-kit';
 
-export class FormUserDetails extends Component { //
+export class HPLogin extends Component {
   continue = e => {
     e.preventDefault();
     this.props.nextStep();
@@ -23,9 +20,9 @@ export class FormUserDetails extends Component { //
         <h1>Welcome to BedAbility! Please Login</h1>
         <Form style={{width:"80%", marginLeft:"0%", marginTop:"10%"}}>
             <Form.Control
-              placeholder="Enter Username" //
-              label="Username" //First Name
-              onChange={handleChange('userName')} //firstName
+              placeholder="Enter Username" 
+              label="Username" 
+              onChange={handleChange('userName')} 
               defaultValue={values.userName}
               margin="normal"
               fullWidth
@@ -33,8 +30,8 @@ export class FormUserDetails extends Component { //
             <br />
             <Form.Control
               placeholder="Enter Password"
-              label="Password" // Last Name
-              onChange={handleChange('passWord')} //lastName
+              label="Password" 
+              onChange={handleChange('passWord')} 
               defaultValue={values.passWord}
               margin="normal"
               fullWidth
@@ -51,14 +48,14 @@ export class FormUserDetails extends Component { //
             <br />
             <h5>Dont have an account?, Create and Register an Account</h5>
             <br />
-            <div class="d-grid gap-2 col-6 mx-auto">
-               <MDBBtn>
-                <Button
-                color="black"
-               // variant="contained"
-                onClick={this.continue}
-              >CREATE ACCOUNT</Button>
-              </MDBBtn>
+            <div className = "App-button">
+                <Button  variant="link" onClick={this.continue}>
+                  Forget your password?
+                </Button>
+                <br/>
+                <Button color="black" variant="link" onClick={this.continue}>
+                  Don't have an account? Create Account
+                </Button>
             </div> 
         </Form>
         </>
@@ -67,4 +64,4 @@ export class FormUserDetails extends Component { //
   }
 }
 
-export default FormUserDetails;
+export default HPLogin;
