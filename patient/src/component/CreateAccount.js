@@ -18,6 +18,7 @@ export class CreateAccount extends Component {
   render() {
     const { values, handleChange } = this.props;
     return (
+      <>
       <Container className = "App-container">
         <MuiThemeProvider>
         <br/>
@@ -27,83 +28,100 @@ export class CreateAccount extends Component {
             <br/>
             <Form.Control
               placeholder="Enter Your Full Name" 
-              label="Full Name" //Occupation
-              onChange={handleChange('fullName')} //occupation
+              label="Full Name" 
+              onChange={handleChange('fullName')} 
               defaultValue={values.fullName}
               margin="normal"
               fullWidth
+              required
             />
             <br />
             <Form.Control
               placeholder="Enter your Age"
               label="Age"
-              onChange={handleChange('age')} //city
+              onChange={handleChange('age')} 
               defaultValue={values.age}
               margin="normal"
               fullWidth
+              required
             />
             <br />
             <Form.Control
               placeholder="Enter Your Complete Address"
               label="Address"
-              onChange={handleChange('address')} //bio
+              onChange={handleChange('address')} 
               defaultValue={values.address}
               margin="normal"
               fullWidth
+              required
             />
             <br />
             <Form.Control
               placeholder="Enter your Position / Occupation"
               label="Position"
-              onChange={handleChange('position')} //bio
+              onChange={handleChange('position')} 
               defaultValue={values.position}
               margin="normal"
               fullWidth
+              required
             />
              <br />
+            <Form.Control
+              placeholder="Contact Number"
+              label="contactNumber"
+              onChange={handleChange('contactNumber')} 
+              defaultValue={values.contactNumber}
+              margin="normal"
+              fullWidth
+              required
+            />
+            <br />
              <Form.Control
               placeholder="Enter your UserName"
               label="UserName"
-              onChange={handleChange('userName')} //bio
+              onChange={handleChange('userName')} 
               defaultValue={values.userName}
               margin="normal"
               fullWidth
+              required
             />
              <br />
             <Form.Control
               placeholder="Enter your Password"
               label="Password"
               type = "password"
-              onChange={handleChange('passWord')} //bio
+              onChange={handleChange('passWord')} 
               defaultValue={values.passWord}
               margin="normal"
               fullWidth
+              required
             />
              <br />
              <Form.Control
               placeholder="Re-Enter your Password"
-              label="RePassword"
+              label="confrirmPassword"
               type = "password"
-              onChange={handleChange('repassWord')} //bio
-              defaultValue={values.repassWord}
+              onChange={handleChange('confirmPassword')} 
+              defaultValue={values.confirmPassword}
               margin="normal"
               fullWidth
+              required
             />
              <br />
             <div className = "App-button">
               <MDBBtn>
                 <Button onClick={this.back}>
                   CANCEL</Button>
-            X
-                <Button
-                type = "button"
-                  onClick={this.continue}
+              </MDBBtn>
+              <MDBBtn>
+                <Button onClick={this.continue}
                   >CONTINUE</Button>
                 </MDBBtn>
             </div>
         </Form>  
       </MuiThemeProvider>
       </Container>
+      </>
     );
   }
 }
