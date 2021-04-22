@@ -39,7 +39,7 @@ export class HPRegister extends Component {
             />
             <br />
             <Form.Control
-              placeholder="Enter your Age"
+              placeholder="Enter your Birthdate"
               label="Age"
               onChange={handleChange('age')} 
               defaultValue={values.age}
@@ -56,11 +56,11 @@ export class HPRegister extends Component {
               fullWidth
             />
              <br />
-             <Form.Control
-              placeholder="Enter your UserName"
-              label="UserName"
-              onChange={handleChange('userName')} 
-              defaultValue={values.userName}
+              <Form.Control
+              placeholder="Enter Hospital Key"
+              label="Hospital Key"
+              onChange={handleChange('key')} 
+              defaultValue={values.key}
               margin="normal"
               fullWidth
             />
