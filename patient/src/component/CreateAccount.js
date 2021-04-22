@@ -108,12 +108,12 @@ export class CreateAccount extends Component {
               required
             />
              <br />
-            <div className = "App-button">
+            <div className = "App-button"  class="d-grid gap-2 d-md-flex justify-content-md-end">
               <MDBBtn>
                 <Button onClick={this.back}>
                   CANCEL</Button>
               </MDBBtn>
-              <MDBBtn>
+              <MDBBtn className = 'mx-2'> 
                 <Button onClick={this.continue}
                   >CONTINUE</Button>
                 </MDBBtn>

@@ -84,7 +84,7 @@
   font-weight: bold;
   text-align: center;
   font-size: 1.1rem;
-  color: #ffffff;
+  color: #00ff6a;
   margin: 5px;
   border: none;
   border-radius: var(--border-radius);
@@ -109,13 +109,12 @@
 }
 
 .App-container {
-  width: 500px;
-  height: 300 px;
-  max-width: 500px;
-  margin: 5rem;
-  margin-inline-end: 10rem;
-  border-style: outset;
+  width: 100px;
+  max-width: 100px;
+  align-items: center;
+  margin: 70px;
   padding: 5rem;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 10 10 40px rgba(0, 0, 0, 0.2);
   background: hsl(0, 0%, 0%);
 }
+

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {ThemeProvider as MuiThemeProvider, Form, Button, Container} from 'react-bootstrap';
-
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardHeader, MDBCardFooter, MDBBtn } from 'mdb-react-ui-kit';
 export class Login extends Component { //
     skip = e => {
         e.preventDefault();
@@ -26,27 +26,24 @@ export class Login extends Component { //
                     <p className = "App-title">Please Login</p>
                     <Form style={{width:"80%", marginLeft:"0%", marginTop:"10%"}}>
                         <Form.Control
-                        placeholder="Enter Username" //
-                        label="Username" //First Name
-                        onChange={handleChange('userName')} //firstName
+                        placeholder="Enter Username" 
+                        label="Username" 
+                        onChange={handleChange('userName')} 
                         defaultValue={values.userName}
-                        margin="normal"
-                        fullWidth
                         required
                         />
                         <br />
                         <Form.Control
                         placeholder="Enter Password"
-                        label="Password" // Last Name
+                        label="Password" 
                         type = "password"
-                        onChange={handleChange('passWord')} //lastName
+                        onChange={handleChange('passWord')} 
                         defaultValue={values.passWord}
-                        margin="normal"
-                        fullWidth
+                        
                         required
                         />
                         <br/>
-                        <div class="d-grid gap-2 col-6 mx-auto">
+                        <div class="d-grid gap-2 col-5 mx-auto">
                             <Button className = "App-button" color="black" type="Submit">
                                 LOGIN
                             </Button>
@@ -63,7 +60,6 @@ export class Login extends Component { //
                     </Form>
                 </MuiThemeProvider>
             </Container>
-
         );
     }
     }

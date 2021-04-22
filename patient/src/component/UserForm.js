@@ -50,6 +50,36 @@ export class UserForm extends Component {
     this.setState({ [input]: e.target.value });
   };
 
+  handleSubmit = input => e => {
+    e.preventDefault();
+
+    if(this.validate()){
+      console.log(this.state);
+
+      let input = {}
+      input["passWord"] = "";
+      input["confirmPassword"] = "";
+      this.setState({input:input});
+    }
+  }
+  validate(){
+    let input = this.state.input;
+    let errors = {}
+    let isValid = true;
+
+    if(typeof input["passWord "] != "undefined" && typeof input["confirmPassword"] != "undefined"){
+      if (input["passWord"] != input["confirmPassword"]) {
+        isValid = false;
+        errors["passWord"] = "Passwords don't match.";
+      }
+    }
+    this.setState({
+      errors: errors
+    });
+
+    return isValid;
+  }
+
   render() {
     const {step} = this.state;
     const { userName, passWord, fullName, address, position, age, contactNumber, code, confirmPassword} = this.state;
@@ -66,6 +96,9 @@ export class UserForm extends Component {
           />
         );
       case 2: 
+          if(this.passWord != this.confirmPassword){
+
+          }
         return (
           <ForgetPassword
             prevStep = {this.prevStep}
@@ -107,7 +140,7 @@ export class UserForm extends Component {
           />
         );
       case 7:
-        return <UserForm />;
+        return <UserForm/>;
 
       default:
         (console.log('This is a multi-step form built with React.'))

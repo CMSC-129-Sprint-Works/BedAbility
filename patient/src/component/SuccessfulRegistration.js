@@ -15,10 +15,7 @@ export class SuccessfulRegistration extends Component {
   render() {
       return (
       <MuiThemeProvider>
-       
         <br/>
-        <br/>
-     
         <Form style={{width:"80%", marginLeft:"0%", marginTop:"0%"}}>
             <h1>Successfully Registered!</h1>
             <p>Thank you for Registering. Please Login</p>
@@ -26,7 +23,6 @@ export class SuccessfulRegistration extends Component {
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <MDBBtn>
               <Button
-                color="Secondary"
                 onClick={this.continue}
                 >PROCEED TO LOGIN</Button>
               </MDBBtn>
