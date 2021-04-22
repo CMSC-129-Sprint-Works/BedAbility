@@ -9,7 +9,7 @@
     <title>Confirmation page</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="shortcut icon" href="/assets/favicon.ico">
-    <link rel="stylesheet" href="./otr/main.css">
+    <link rel="stylesheet" href="/css/Patient/otr/main.css">
 </head>
 
 <body>
@@ -63,11 +63,6 @@
             <div class="form__message form__message--error"></div>
 
             <div class="form__input-group">
-                <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
-                <div class="form__input-error-message"></div>
-            </div>
-
-            <div class="form__input-group">
                 <input type="text" id="signupUsername" class="form__input" autofocus placeholder="First name">
                 <div class="form__input-error-message"></div>
             </div>
@@ -88,7 +83,7 @@
             </div>
 
             <div class="form__input-group">
-                <input type="text" id="signupUsername-contact" class="form__input" autofocus placeholder="Contact number">
+                <input type="text" id="signupUsername-contact" class="form__input"  autofocus placeholder="Contact number">
                 <div class="form__input-error-message"></div>
             </div>
 
@@ -98,7 +93,7 @@
             </div>
 
             <div class="form__input-group">
-                <input type="password" id="signupUsername-confirm" class="form__input" autocomplete="off" autofocus placeholder="Confirm password">
+                <input type="password" id="signupUsername-confirm" class="form__input" autocomplete="off"  autofocus placeholder="Confirm password">
                 <div class="form__input-error-message"></div>
             </div>
 
@@ -119,23 +114,13 @@
                 <div class="form__input-error-message"></div>
             </div>
 
-            <a class="form__link" href="./" id="linkConfirm">
+             <a class="form__link" href="./" id="linkConfirm">
                 <button class="form__button">Confirm</button>
             </a>
 
-            <a class="form__link" href="./" id="linkBack">
+             <a class="form__link" href="./" id="linkBack">
                 <button class="form__button">Back</button>
             </a>
-
-
-            <!--<a class="form__link" href="./" id="linkWelcome">
-                <button class="form__button" id = "confirm-button">Confirm</button>
-            </a>
-
-            <a class="form__link" href="./" id="linkCreateAccount">
-                <button class="form__button" id = "back-button">Back</button>
-            </a>-->
-
         </form>
 
         <form class="form form--hidden" id="forgot">
@@ -155,12 +140,12 @@
             </div>
 
             <div class="form__input-group">
-                <input type="password" class="form__input" id="resetPassword" autofocus placeholder="New Password">
+                <input type="password" class="form__input" id = "resetPassword" autofocus placeholder="New Password">
                 <div class="form__input-error-message"></div>
             </div>
 
             <div class="form__input-group">
-                <input type="password" class="form__input" id="resetConfirm" autofocus placeholder="Confirm New Password">
+                <input type="password" class="form__input" id = "resetConfirm" autofocus placeholder="Confirm New Password">
                 <div class="form__input-error-message"></div>
             </div>
 
@@ -172,8 +157,7 @@
                 <button class="form__button">Cancel</button>
             </a>
         </form>
-
     </div>
 
-    <script src="./otr/main.js"></script>
+    <script src="css/Patient/otr/main.js"></script>
 </body>

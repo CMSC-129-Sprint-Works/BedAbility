@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::get('/patient-registration', function () {
     return view('Patient Registration UI.index');
 });
+
+Route::get('/controller', 'PatientRegistrationController@index');
