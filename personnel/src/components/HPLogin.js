@@ -26,9 +26,9 @@ export class HPLogin extends Component {
         <Form style={{width:"80%", marginLeft:"0%", marginTop:"5%", marginRight:"10%"}}>
             <Form.Control
               placeholder="Enter Email Address" 
-              label="Username" 
-              onChange={handleChange('userName')} 
-              defaultValue={values.userName}
+              label="Email" 
+              onChange={handleChange('email')} 
+              defaultValue={values.email}
               margin="normal"
               fullWidth
             />

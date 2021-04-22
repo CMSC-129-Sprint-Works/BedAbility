@@ -39,7 +39,7 @@ export class HPConfirm extends Component {
 
   render() {
     const {
-      values: { userName, passWord, fullName, address, position, age }
+      values: { email, passWord, lastName, firstName, Hkey, position, age }
     } = this.props;
     return (
       <MuiThemeProvider>
@@ -49,19 +49,22 @@ export class HPConfirm extends Component {
         <Form style={{width:"80%", marginLeft:"0%", marginTop:"0%"}}>
             <List>
               <ListItem>
-                <ListItemText primary="Full Name" secondary={fullName} />
+                <ListItemText primary="Last Name" secondary={lastName} />
               </ListItem>
               <ListItem>
-                <ListItemText primary="Age" secondary={age} />
+                <ListItemText primary="First Name" secondary={firstName} />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="Birthdate" secondary={age} />
               </ListItem>
               <ListItem>
                 <ListItemText primary="Position" secondary={position} />
               </ListItem>
               <ListItem>
-                <ListItemText primary="Username" secondary={userName} />
+                <ListItemText primary="Hospital key" secondary={Hkey} />
               </ListItem>
               <ListItem>
-                <ListItemText primary="Address" secondary={address} />
+                <ListItemText primary="Username" secondary={email} />
               </ListItem>
               <ListItem>
                 <ListItemText primary="Password" secondary={passWord} />

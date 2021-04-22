@@ -30,10 +30,19 @@ export class HPRegister extends Component {
         <Form style={{width:"80%", marginLeft:"0%", marginTop:"0%"}}>
             <br/>
             <Form.Control
-              placeholder="Enter Your Full Name" 
-              label="Full Name" 
-              onChange={handleChange('fullName')} 
-              defaultValue={values.fullName}
+              placeholder="Enter Your Last Name" 
+              label="Last Name" 
+              onChange={handleChange('lastName')} 
+              defaultValue={values.lastName}
+              margin="normal"
+              fullWidth
+            />
+            <br/>
+             <Form.Control
+              placeholder="Enter Your First Name" 
+              label="First Name" 
+              onChange={handleChange('firstName')} 
+              defaultValue={values.firstName}
               margin="normal"
               fullWidth
             />
@@ -59,17 +68,17 @@ export class HPRegister extends Component {
               <Form.Control
               placeholder="Enter Hospital Key"
               label="Hospital Key"
-              onChange={handleChange('key')} 
-              defaultValue={values.key}
+              onChange={handleChange('Hkey')} 
+              defaultValue={values.Hkey}
               margin="normal"
               fullWidth
             />
              <br />
                 <Form.Control
               placeholder="Enter Your Email Address"
-              label="Address"
-              onChange={handleChange('address')} 
-              defaultValue={values.address}
+              label="Email"
+              onChange={handleChange('email')} 
+              defaultValue={values.email}
               margin="normal"
               fullWidth
             />
