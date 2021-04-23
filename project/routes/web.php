@@ -14,7 +14,8 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', 'HomeController@index');
+// get(<url after home url 'www.bedability.com/'>, which action to perform from controller class)
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/patient-registration', function () {
     return view('Patient Registration UI.index');
