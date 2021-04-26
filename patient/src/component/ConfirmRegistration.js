@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
-//import Dialog from '@material-ui/core/Dialog';
-//import AppBar from '@material-ui/core/AppBar';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { List, ListItem, ListItemText } from '@material-ui/core/';
-import Button from '@material-ui/core/Button';
-import {Container, Form} from 'react-bootstrap';
-import { MDBBtn } from 'mdb-react-ui-kit';
+import {Form, Button, Container} from 'react-bootstrap';
 
 export class ConfirmRegistration extends Component {
   continue = e => {
     e.preventDefault();
-    // PROCESS FORM //
     this.props.nextStep();
   };
 
@@ -20,52 +14,35 @@ export class ConfirmRegistration extends Component {
   };
 
   render() {
-    const {
-      values: { userName, passWord, fullName, address, position, age }
-    } = this.props;
+    const {values: { firstName, lastName, email, birthDate, address, contactNumber}}= this.props;
     return (
-     <Container className = 'App-container'>
-        <MuiThemeProvider>
-        <>
-        <br/>
-        <h1 className = "App-title">Please Review and Confirm to Register</h1>
-        <Form style={{width:"80%", marginLeft:"0%", marginTop:"0%"}}>
-            <List className = "App-text">
-              <ListItem>
-                <ListItemText primary="Full Name" secondary={fullName} />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Age" secondary={age} />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Address" secondary={address} />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Position" secondary={position} />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Username" secondary={userName} />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Password" secondary={passWord} />
-              </ListItem>
-            </List>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <MDBBtn>
-              <Button
-                onClick={this.back}
-                >CANCEL</Button>
-              </MDBBtn>
-              <MDBBtn className = 'mx-2'>
-               <Button
-                onClick={this.continue}
-                >CONTINUE</Button>
-              </MDBBtn>
-              
-            </div>
-        </Form>  
-        </>
-      </MuiThemeProvider>
+     <Container className = "App-container">
+        <form>
+          <h3 className = "App-title">Please confirm your registration</h3>
+          <br/>
+          <div className = "App-text">
+            <dl class="row">
+              <dt class="col-sm-3">FULL NAME:</dt>
+              <dd class="col-sm-9">{firstName + " " + lastName}</dd>
+
+              <dt class="col-sm-3">EMAIL ADDRESS:</dt>
+              <dd class="col-sm-9">{email}</dd>
+
+              <dt class="col-sm-3">BIRTH DATE:</dt>
+              <dd class="col-sm-9">{birthDate}</dd>
+
+              <dt class="col-sm-3">ADDRESS:</dt>
+              <dd class="col-sm-9">{address}</dd>
+
+              <dt class="col-sm-3">CONTACT NUMBER:</dt>
+              <dd class="col-sm-9">{contactNumber}</dd>
+            </dl>
+          </div>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="submit" className="btn btn-success btn-lg" onClick  = {this.back}>Cancel</button>
+            <button type="submit" className="btn btn-success btn-lg mx-2" onClick  = {this.continue}>Register</button>
+          </div>
+        </form>
      </Container>
     );
   }

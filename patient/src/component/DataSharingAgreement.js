@@ -1,35 +1,31 @@
+
 import React, { Component } from 'react';
-import {ThemeProvider as MuiThemeProvider, Form, Button, Container} from 'react-bootstrap';
+import {Container, Form, Button} from 'react-bootstrap'
+import { MDBBtn } from 'mdb-react-ui-kit';
 
 export class DataSharingAgreement extends Component { //
   continue = e => {
     e.preventDefault();
     this.props.nextStep();
   };
+  back = e => {
+    e.preventDefault();
+    this.props.prevStep();
+  };
 
   render() {
-    const { values, handleChange } = this.props;
     return (
-        <Container className = "App-container">
-             <MuiThemeProvider>
-                <h1 className = "App-welcome">Welcome to BedAbility!</h1>
-                <br/>
-                <p className = "App-title">Please Login</p>
-                <Form style={{width:"80%", marginLeft:"0%", marginTop:"10%"}}>
-                    <p className = "App-text">This is the Data Sharing Agreement agree to continue using the application</p>
-                    <br/>
-                    <div class="d-grid gap-2 col-6 mx-auto">
-                        <Button className = "App-button" color="black" type="Submit" onClick={this.continue}>
-                            Agree
-                        </Button>
-                        <Button className = "App-button" color="black" type="Submit" onClick={this.back}>
-                            Disagree
-                        </Button>
-                    </div>
-                </Form>
-            </MuiThemeProvider>
-        </Container>
-
+      <Container className = "App-container">
+          <form>
+            <h3 className = "App-title">Data Sharing Agreement</h3>
+            <br/>
+            <p className = "App-text">This is Data Sharing Agreement. Please read.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+              <button type="submit" className="btn btn-success btn-lg" onClick  = {this.continue}>Agree</button>
+              <button type="submit" className="btn btn-success btn-lg mx-2" onClick  = {this.back}>Disagree</button>
+            </div>
+          </form>
+      </Container>
     );
   }
 }

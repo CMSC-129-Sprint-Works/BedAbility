@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import {Container, Form} from 'react-bootstrap';
-import { MDBBtn } from 'mdb-react-ui-kit';
+import {Container} from 'react-bootstrap';
+
 
 export class ForgetPassword extends Component {
-  continue = e => {
-    e.preventDefault();
-    this.props.nextStep();
-  };
-
   back = e => {
-    e.preventDefault();
+    e.preventDefault(); 
     this.props.prevStep();
   };
 
@@ -19,51 +12,27 @@ export class ForgetPassword extends Component {
     const { values, handleChange } = this.props;
     return (
       <Container className = "App-container">
-        <MuiThemeProvider>
-        <br/>
-        <h1 className = "App-welcome">Reset Password</h1>
-        <Form style={{width:"80%", marginLeft:"0%", marginTop:"0%"}}>
-            <br/>
-            <Form.Control
-              placeholder="Enter code" 
-              label="code" 
-              onChange={handleChange('code')} //occupation
-              defaultValue={values.code}
-              margin="normal"
-              fullWidth
-              required
-            />
-            <br />
-            <Form.Control
-              placeholder="Enter your Password"
-              label="Password"
-              type = "password"
-              onChange={handleChange('passWord')} //bio
-              defaultValue={values.passWord}
-              margin="normal"
-              fullWidth
-              required
-            />
-             <br />
-             <Form.Control
-              placeholder="Re-Enter your Password"
-              label="RePassword"
-              type = "password"
-              onChange={handleChange('confirmPassword')} //bio
-              defaultValue={values.confirmPassword}
-              margin="normal"
-              fullWidth
-              required
-            />
-             <br />
-            <div className = "App-button">
-              <MDBBtn>
-                <Button onClick={this.back}>
-                  CONFIRM</Button>
-              </MDBBtn>
+       <form>
+          <h3 className = "App-title">Change Password</h3>
+          <br/>
+          <div className="form-group">
+              <label className = "App-label">Code</label>
+              <input type="email" className="form-control" placeholder="Enter code"  onChange={handleChange('code')} defaultValue={values.code} required/>
+          </div>
+
+          <div className="form-group">
+              <label className = "App-label">Password</label>
+              <input type="password" className="form-control" placeholder="Enter password"  onChange={handleChange('passWord')} defaultValue={values.passWord} required/>
+          </div>
+
+          <div className="form-group">
+              <input type="password" className="form-control" placeholder="Confirm password"  onChange={handleChange('confirmPassword')} defaultValue={values.confirmPassword} required/>
+          </div>
+          <br/>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+              <button type="submit" className="btn btn-success btn-lg mx-2" onClick  = {this.back}>Continue</button>
             </div>
-        </Form>  
-      </MuiThemeProvider>
+        </form>
       </Container>
     );
   }

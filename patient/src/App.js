@@ -1,21 +1,18 @@
 import React from "react";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Row, Col, Image} from 'react-bootstrap';
+import { Row, Col} from 'react-bootstrap';
 import UserForm from "./component/UserForm";
-//import DataSharingAgreement from "./component/DataSharingAgreement";
-import Login from "./component/Login";
-import CreateAccount from "./component/CreateAccount";
-import ForgetPassword from "./component/ForgetPassword";
-import SuccessfulRegistration from "./component/SuccessfulRegistration";
+import Bedability from "./component/Bedability";
+
 
 function App() {
   return (
     <>
-    <form className="Login Page">
+    <form className="App">
       <div>
-      <Row className="landing">
-        <Col ><Image src="./bg.jpg" thumbnail style={{border:"none"}} /> </Col>
+      <Row>
+        <Col><Bedability/> </Col>
         <Col ><UserForm/></Col>
       </Row>
       </div>
