@@ -3,20 +3,23 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col} from 'react-bootstrap';
 import UserForm from "./component/UserForm";
-import Bedability from "./component/Bedability";
 
 
 function App() {
   return (
     <>
-    <form className="App">
-      <div>
-      <Row>
-        <Col><Bedability/> </Col>
-        <Col ><UserForm/></Col>
-      </Row>
-      </div>
-    </form>
+      <section class = "Form">
+        <div class = "container">
+          <div class = "row">
+            <div class = "col-lg-7">
+              <img src = "./bg.jpg" class = "img-fluid" alt = ""/>
+            </div>
+            <div class = "col-lg-5">
+              <UserForm/>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
