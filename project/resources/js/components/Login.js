@@ -26,24 +26,24 @@ export class Login extends Component { //
                     <p className = "App-title">Please Login</p>
                     <Form style={{width:"80%", marginLeft:"0%", marginTop:"10%"}}>
                         <Form.Control
-                        placeholder="Enter Username" 
-                        label="Username" 
-                        onChange={handleChange('userName')} 
+                        placeholder="Enter Username"
+                        label="Username"
+                        onChange={handleChange('userName')}
                         defaultValue={values.userName}
                         required
                         />
                         <br />
                         <Form.Control
                         placeholder="Enter Password"
-                        label="Password" 
+                        label="Password"
                         type = "password"
-                        onChange={handleChange('passWord')} 
+                        onChange={handleChange('passWord')}
                         defaultValue={values.passWord}
-                        
+
                         required
                         />
                         <br/>
-                        <div class="d-grid gap-2 col-5 mx-auto">
+                        <div className="d-grid gap-2 col-5 mx-auto">
                             <Button className = "App-button" color="black" type="Submit">
                                 LOGIN
                             </Button>
@@ -56,7 +56,7 @@ export class Login extends Component { //
                             <Button variant="link" onClick={this.skip}>
                                 Don't have an account? Create Account.
                             </Button>
-                        </div> 
+                        </div>
                     </Form>
                 </MuiThemeProvider>
             </Container>

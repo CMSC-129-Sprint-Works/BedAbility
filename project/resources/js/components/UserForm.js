@@ -5,6 +5,7 @@ import ConfirmRegistration from "./ConfirmRegistration"; //confirm registration
 import SuccessfulRegistration from './SuccessfulRegistration'; //  successful Registration
 import DataSharingAgreement from './DataSharingAgreement';
 import ForgetPassword from './ForgetPassword';
+import ReactDOM from 'react-dom';
 
 
 export class UserForm extends Component {
@@ -95,7 +96,7 @@ export class UserForm extends Component {
             values={values}
           />
         );
-      case 2: 
+      case 2:
           if(this.passWord != this.confirmPassword){
 
           }
@@ -149,3 +150,7 @@ export class UserForm extends Component {
 }
 
 export default UserForm;
+
+if (document.getElementById('form')) {
+    ReactDOM.render(<UserForm />, document.getElementById('form'));
+}

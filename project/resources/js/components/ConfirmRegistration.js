@@ -50,7 +50,7 @@ export class ConfirmRegistration extends Component {
                 <ListItemText primary="Password" secondary={passWord} />
               </ListItem>
             </List>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <div className="d-grid gap-2 d-md-flex justify-content-md-end">
             <MDBBtn>
               <Button
                 onClick={this.back}
@@ -61,9 +61,9 @@ export class ConfirmRegistration extends Component {
                 onClick={this.continue}
                 >CONTINUE</Button>
               </MDBBtn>
-              
+
             </div>
-        </Form>  
+        </Form>
         </>
       </MuiThemeProvider>
      </Container>
