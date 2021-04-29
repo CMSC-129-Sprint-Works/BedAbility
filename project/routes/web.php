@@ -27,6 +27,3 @@ Route::get('/patient-registration/sendrequest', [PatientReceiverController::clas
 Route::get('/controller', 'PatientRegistrationController@index');
 
 Route::view('/{path?}', 'app');
-
-// waw2
-
