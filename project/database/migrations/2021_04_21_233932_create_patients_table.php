@@ -18,8 +18,7 @@ class CreatePatientsTable extends Migration
             $table->string('email')->unique();
             $table->string('first_name');
             $table->string('last_name');
-            // change this to date of birth
-            $table->integer('age');
+            $table->date('date_of_birth');
             $table->string('address');
             $table->string('contact_number');
             $table->timestamp('email_verified_at')->nullable();
