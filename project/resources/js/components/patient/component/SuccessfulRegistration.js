@@ -6,7 +6,7 @@ import { MDBBtn } from 'mdb-react-ui-kit';
 
 
 export class SuccessfulRegistration extends Component {
-
+  
   continue = e => {
     e.preventDefault();
     this.props.nextStep();
@@ -20,15 +20,15 @@ export class SuccessfulRegistration extends Component {
             <h1>Successfully Registered!</h1>
             <p>Thank you for Registering. Please Login</p>
 
-            <div className="d-grid gap-2 d-md-flex justify-content-md-end">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <MDBBtn>
               <Button
                 onClick={this.continue}
                 >PROCEED TO LOGIN</Button>
               </MDBBtn>
             </div>
-        </Form>
-
+        </Form>  
+        
       </MuiThemeProvider>
     );
 }

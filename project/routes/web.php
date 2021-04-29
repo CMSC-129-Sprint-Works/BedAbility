@@ -21,7 +21,7 @@ Route::get('/patient-registration', function () {
     return view('Patient Registration UI.index');
 });
 
-Route::get('/patient-registration/sendrequest', [PatientReceiverController::class, 'ReceiveIt']);
+Route::post('/patient-registration/sendrequest', [PatientReceiverController::class, 'ReceiveIt']);
 
 Route::get('/controller', 'PatientRegistrationController@index');
 
