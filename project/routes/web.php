@@ -28,4 +28,5 @@ Route::get('/controller', 'PatientRegistrationController@index');
 
 Route::view('/{path?}', 'app');
 
+// waw
 
