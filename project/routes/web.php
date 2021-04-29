@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PatientReceiverController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +22,10 @@ Route::get('/patient-registration', function () {
     return view('Patient Registration UI.index');
 });
 
+Route::get('/patient-registration/sendrequest', [PatientReceiverController::class, 'ReceiveIt']);
+
 Route::get('/controller', 'PatientRegistrationController@index');
+
+Route::view('/{path?}', 'app');
+
+
