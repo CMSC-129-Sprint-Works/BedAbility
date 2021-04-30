@@ -15,7 +15,6 @@
     <body class="antialiased">
 
         <div id=app></div>
-        <p>hello</p>
 
        <script src="js/app.js"></script>
 

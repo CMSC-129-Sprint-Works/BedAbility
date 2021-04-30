@@ -11445,8 +11445,24 @@ var ConfirmRegistration = /*#__PURE__*/function (_Component) {
   }
 
   _createClass(ConfirmRegistration, [{
+    key: "handleSubmit",
+    value:
+    /**
+     * Sends data to Laravel blade for processing
+     */
+    function handleSubmit() {
+      var packets = this.props;
+      axios.post('/patient/formsubmit', packets).then(function (response) {
+        return alert(JSON.stringify(response.data));
+      })["catch"](function (error) {
+        console.log("ERROR:: ", error.response.data);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var _this$props$values = this.props.values,
           userName = _this$props$values.userName,
           passWord = _this$props$values.passWord,
@@ -11510,7 +11526,11 @@ var ConfirmRegistration = /*#__PURE__*/function (_Component) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(mdb_react_ui_kit__WEBPACK_IMPORTED_MODULE_1__.MDBBtn, {
                   className: "mx-2",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_9__.default, {
-                    onClick: this["continue"],
+                    onClick: function onClick(event) {
+                      _this2["continue"](event);
+
+                      _this2.handleSubmit();
+                    },
                     children: "CONTINUE"
                   })
                 })]

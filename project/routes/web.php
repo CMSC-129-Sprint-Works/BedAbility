@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PatientReceiverController;
+use App\Http\Controllers\PatientPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,13 +16,10 @@ use App\Http\Controllers\PatientReceiverController;
 */
 
 // get(<url after home url 'www.bedability.com/'>, which action to perform from controller class)
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/patient', [HomeController::class, 'index']);
 
-Route::get('/patient-registration', function () {
-    return view('Patient Registration UI.index');
-});
 
-Route::post('/patient-registration/sendrequest', [PatientReceiverController::class, 'ReceiveIt']);
+Route::post('/patient/formsubmit', [PatientPostController::class, 'formsubmit']);
 
 Route::get('/controller', 'PatientRegistrationController@index');
 

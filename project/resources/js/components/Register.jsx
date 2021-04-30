@@ -55,10 +55,9 @@ class Register extends Component {
             email: this.state.email,
             password: this.state.password
         };
-        axios.post('/sendrequest', packets)
+        axios.post('/patient/formsubmit', packets)
             .then(
                 response => alert(JSON.stringify(response.data))
-
                 )
             .catch(error => {
                 console.log("ERROR:: ",error.response.data);

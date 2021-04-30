@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class PatientReceiverController extends Controller
 {
-    public function ReceiveIt(Request $request){
+    public function formSubmitOld(Request $request){
         $validatedData = $request->validate([
             'id' => 'nullable',
             'email' => 'nullable',
@@ -20,7 +20,17 @@ class PatientReceiverController extends Controller
             'remember' => 'nullable',
             'timestamps' => 'nullable'
         ]);
-
         return json_encode($validatedData);
     }
+
+    /**
+     * success response method.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function formsubmit(Request $request)
+    {
+    	return response()->json([$request->all()]);
+    }
+
 }
