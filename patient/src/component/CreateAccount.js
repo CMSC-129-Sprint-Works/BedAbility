@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import {Container, Form} from 'react-bootstrap';
-import { MDBBtn } from 'mdb-react-ui-kit';
+import {Container, Form, Button} from 'react-bootstrap';
 
 export class CreateAccount extends Component {
   continue = e => {
@@ -18,110 +15,90 @@ export class CreateAccount extends Component {
   render() {
     const { values, handleChange } = this.props;
     return (
-      <>
-      <Container className = "App-container">
-        <MuiThemeProvider>
-        <br/>
-        <h1 className = "App-welcome">Create an Account</h1>
-        <h2 className = "App-title">Please Fill-up</h2>
-        <Form style={{width:"80%", marginLeft:"0%", marginTop:"0%"}}>
+     <Container className = "App-containervar">
+        <form>
+            <h1 className = "App-welcome">Create an Account</h1>
             <br/>
-            <Form.Control
-              placeholder="Enter Your Full Name" 
-              label="Full Name" 
-              onChange={handleChange('fullName')} 
-              defaultValue={values.fullName}
-              margin="normal"
-              fullWidth
-              required
-            />
-            <br />
-            <Form.Control
-              placeholder="Enter your Age"
-              label="Age"
-              onChange={handleChange('age')} 
-              defaultValue={values.age}
-              margin="normal"
-              fullWidth
-              required
-            />
-            <br />
-            <Form.Control
-              placeholder="Enter Your Complete Address"
-              label="Address"
-              onChange={handleChange('address')} 
-              defaultValue={values.address}
-              margin="normal"
-              fullWidth
-              required
-            />
-            <br />
-            <Form.Control
-              placeholder="Enter your Position / Occupation"
-              label="Position"
-              onChange={handleChange('position')} 
-              defaultValue={values.position}
-              margin="normal"
-              fullWidth
-              required
-            />
-             <br />
-            <Form.Control
-              placeholder="Contact Number"
-              label="contactNumber"
-              onChange={handleChange('contactNumber')} 
-              defaultValue={values.contactNumber}
-              margin="normal"
-              fullWidth
-              required
-            />
-            <br />
-             <Form.Control
-              placeholder="Enter your UserName"
-              label="UserName"
-              onChange={handleChange('userName')} 
-              defaultValue={values.userName}
-              margin="normal"
-              fullWidth
-              required
-            />
-             <br />
-            <Form.Control
-              placeholder="Enter your Password"
-              label="Password"
-              type = "password"
-              onChange={handleChange('passWord')} 
-              defaultValue={values.passWord}
-              margin="normal"
-              fullWidth
-              required
-            />
-             <br />
-             <Form.Control
-              placeholder="Re-Enter your Password"
-              label="confrirmPassword"
-              type = "password"
-              onChange={handleChange('confirmPassword')} 
-              defaultValue={values.confirmPassword}
-              margin="normal"
-              fullWidth
-              required
-            />
-             <br />
-            <div className = "App-button"  class="d-grid gap-2 d-md-flex justify-content-md-end">
-              <MDBBtn>
-                <Button onClick={this.back}>
-                  CANCEL</Button>
-              </MDBBtn>
-              <MDBBtn className = 'mx-2'> 
-                <Button onClick={this.continue}
-                  >CONTINUE</Button>
-                </MDBBtn>
+            <div className="form-group">
+                <label className = "App-label">First Name</label>
+                <input className="form-control"
+                        placeholder="Enter Your First Name" 
+                        onChange={handleChange('firstName')} 
+                        defaultValue={values.firstName}
+                        required/>
             </div>
-        </Form>  
-      </MuiThemeProvider>
-      </Container>
-      </>
+            <div className="form-group">
+                <label className = "App-label">Last Name</label>
+                <input className="form-control"
+                        placeholder="Enter Your Last Name" 
+                        onChange={handleChange('lastName')} 
+                        defaultValue={values.lastName}
+                        required/>
+            </div>
+            <div className="form-group">
+                <label className = "App-label">Email</label>
+                <input className="form-control"
+                        placeholder="Enter Your Email Address" 
+                        type = "email"
+                        onChange={handleChange('email')} 
+                        defaultValue={values.email}
+                        required/>
+            </div>
+
+            <div className="form-group">
+                <label className = "App-label">Birthdate</label>
+                <input className="form-control"
+                        type = "date"
+                        onChange={handleChange('birthDate')} 
+                        defaultValue={values.firstName}
+                        required/>
+            </div>
+
+            <div className="form-group">
+                <label className = "App-label">Address</label>
+                <input className="form-control"
+                        placeholder="Enter Your Complete Address"
+                        onChange={handleChange('address')} 
+                        defaultValue={values.address}
+                        required/>
+            </div>
+
+            <div className="form-group">
+                <label className = "App-label">Contact Number</label>
+                <input className="form-control"
+                        placeholder="Enter Your Contact Number"
+                        htmlSize = "11"
+                        onChange={handleChange('contactNumber')} 
+                        defaultValue={values.contactNumber}
+                        required/>
+            </div>
+
+            <div className="form-group">
+                <label className = "App-label">Password</label>
+                <input className="form-control"
+                        placeholder="Enter your Password"
+                        type = "password"
+                        onChange={handleChange('passWord')} 
+                        defaultValue={values.passWord}
+                        required/>
+            </div>
+
+            <div className="form-group">
+                <label className = "App-label">Confirm Password</label>
+                <input className="form-control"
+                        placeholder="Re-Enter your Password"
+                        type = "password"
+                        onChange={handleChange('confirmPassword')} 
+                        defaultValue={values.confirmPassword}
+                        required/>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button type="submit" className="btn btn-success btn-lg" onClick  = {this.back}>Cancel</button>
+              <button type="submit" className="btn btn-success btn-lg mx-2" onClick  = {this.continue}>Continue</button>
+            </div>
+          </form>
+     </Container>
     );
   }
 }

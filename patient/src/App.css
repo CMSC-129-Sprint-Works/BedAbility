@@ -1,32 +1,48 @@
 .App {
-  --color-primary: #a314db;
-  --color-primary-dark: #5c09aa;
-  --color-secondary: #252c6a;
   --color-error: #db1414;
-  --color-success: #15fc00;
+  --color-success: #00fc4c;
   --border-radius: 4px;
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  align-items: center;
+  display:flex;
   justify-content: center;
-  font-size: 18px;
-  font: 500 1rem 'Quicksand', sans-serif;
-  /*background-image: url("src/hospitalbed.jpg");*/
-  background-size: cover;
-  margin-bottom: 2rem;
-  text-align: center;
+  align-items: center;
+  margin-bottom: 2rem;  
 }
 
 .App-welcome {
-  margin-bottom: 2rem;
-  margin-right: 10rem;
   text-align: center;
-  color: #fff9f9;
-  align-items: stretch;
+  justify-content: flex;
+  color: rgb(1, 252, 56);
   font-size: 20pt;
   font-weight: bolder;
 
+}
+
+.App-title {
+  text-align: center;
+  justify-content: flex;
+  color: rgb(1, 252, 56);
+  font-size: 15pt;
+  font-weight: bolder;
+}
+
+.App-text {
+  color: rgb(255, 255, 255);
+  text-align: justify;
+  justify-content: flex;
+}
+
+.App-picture {
+  display: grid;
+  align-items: flex-start;  
+  justify-content: flex-start;
+  justify-items: flex-start;
+
+}
+
+.App-label {
+  text-align: left;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
 }
 
 .App-logo {
@@ -51,21 +67,21 @@
   color: white;
 }
 
-.App-inputBox {
-  display: block;
-  width: 100%;
-  padding: 0.75rem;
+.App-form {
+  display: contents;
+  width: 80%;
+  padding: 1rem;
   box-sizing: border-box;
+  margin-left: 20%;
+  margin-top: 20%;
   border-radius: var(--border-radius);
-  border: 1px solid #dddddd;
-  outline: none;
-  background: #eeeeee;
   transition: background 0.2s, border-color 0.2s;
 }
 
 .App-link {
-  color: #00fa70;
+  color: #dddddd;
 }
+
 
 @keyframes App-logo-spin {
   from {
@@ -74,47 +90,41 @@
 
   to {
     transform: rotate(360deg);
+
   }
 }
 
 .App-button {
-  width: 100%;
-  height: 40px;
+  width: fit-content;
+  height: fit-content;
+  display: contents;
   padding: 1rem 2rem;
-  font-weight: bold;
-  text-align: center;
-  font-size: 1.1rem;
-  color: #00ff6a;
   margin: 5px;
   border: none;
   border-radius: var(--border-radius);
   outline: none;
   cursor: pointer;
-  background-color: var(--color-primary);
+  outline-color: green;
+  background-color: #18c421;
 }
 
-.App-title {
-  margin-bottom: 2rem;
-  margin-right: 10rem;
-  text-align: center;
-  color: #ffffff;
-  align-items: center;
-  font-size: 15pt;
-  font-weight: bolder;
-}
-
-.App-text {
-  font: 500 1rem 'Quicksand', sans-serif;
-  color: white;
-}
 
 .App-container {
-  width: 100px;
-  max-width: 100px;
-  align-items: center;
-  margin: 70px;
-  padding: 5rem;
-  box-shadow: 10 10 40px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  max-width: 400px;
+  margin: 10rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
   background: hsl(0, 0%, 0%);
 }
 
+.App-containervar {
+  width: 200px;
+  max-width: 400px;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  background: hsl(0, 0%, 0%);
+}

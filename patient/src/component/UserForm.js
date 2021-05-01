@@ -1,31 +1,40 @@
-import React, { useState, Component } from 'react';
+import React, {Component } from 'react';
 import Login from './Login'; //  login
 import CreateAccount from './CreateAccount'; // register
 import ConfirmRegistration from "./ConfirmRegistration"; //confirm registration
 import SuccessfulRegistration from './SuccessfulRegistration'; //  successful Registration
-import DataSharingAgreement from './DataSharingAgreement';
-import ForgetPassword from './ForgetPassword';
+import DataSharingAgreement from './DataSharingAgreement'; //Data Sharing Agreement
+import ForgetPassword from './ForgetPassword';//reset password
+import SendCode from './SendCode'; //ask for user email and send code to verify the owner
 
 
 export class UserForm extends Component {
+
   state = {
     step: 1,
-    userName:'',
+    email:'',
     passWord:'',
-    fullName: '',
+    firstName: '',
+    lastName: '',
     address: '',
     position: '',
     contactNumber: null,
-    age: null,
+    birthDate: null,
     code: null,
     confirmPassword: '',
   };
 
-  //skip the next step
-  skipStep = () => {
-    const { step } = this.state;
+  toCreateAccount = () => {
+    const {step} = this.state;
     this.setState({
-      step: step + 2
+      step: step + 3
+    });
+  };
+
+  toForgetPassword = () => {
+    const {step} = this.state;
+    this.setState({
+      step:step + 1
     });
   };
 
@@ -40,9 +49,26 @@ export class UserForm extends Component {
   // Go back to prev step
   prevStep = () => {
     const { step } = this.state;
-    this.setState({
-      step: step - 1
-    });
+    if(step === 3){
+      this.setState({
+        step: step - 2
+      });
+    }
+    else if(step === 5){
+      this.setState({
+        step:step - 4
+      });
+    }
+    else if(step === 4){
+      this.setState({
+        step:step - 3
+      });
+    }
+    else{
+      this.setState({
+        step: step - 1
+      });
+    }
   };
 
   // Handle fields change
@@ -50,55 +76,32 @@ export class UserForm extends Component {
     this.setState({ [input]: e.target.value });
   };
 
-  handleSubmit = input => e => {
-    e.preventDefault();
-
-    if(this.validate()){
-      console.log(this.state);
-
-      let input = {}
-      input["passWord"] = "";
-      input["confirmPassword"] = "";
-      this.setState({input:input});
-    }
-  }
-  validate(){
-    let input = this.state.input;
-    let errors = {}
-    let isValid = true;
-
-    if(typeof input["passWord "] != "undefined" && typeof input["confirmPassword"] != "undefined"){
-      if (input["passWord"] != input["confirmPassword"]) {
-        isValid = false;
-        errors["passWord"] = "Passwords don't match.";
-      }
-    }
-    this.setState({
-      errors: errors
-    });
-
-    return isValid;
-  }
 
   render() {
     const {step} = this.state;
-    const { userName, passWord, fullName, address, position, age, contactNumber, code, confirmPassword} = this.state;
-    const values = {userName, passWord, fullName, address, position, age, contactNumber, code, confirmPassword};
+    const {passWord, firstName, lastName, address, position, birthDate, contactNumber, code, email, confirmPassword} = this.state;
+    const values = {passWord, firstName, lastName, address, position, birthDate, contactNumber, code, email, confirmPassword};
 
     switch (step) {
       case 1:
         return (
           <Login
             nextStep = {this.nextStep}
-            skipStep={this.skipStep}
+            toForgetPassword = {this.toForgetPassword}
+            toCreateAccount={this.toCreateAccount}
             handleChange={this.handleChange}
             values={values}
           />
         );
       case 2: 
-          if(this.passWord != this.confirmPassword){
-
-          }
+        return (
+          <SendCode
+            nextStep = {this.nextStep}
+            handleChange={this.handleChange}
+            values = {values}
+          />
+        );
+      case 3: 
         return (
           <ForgetPassword
             prevStep = {this.prevStep}
@@ -106,7 +109,7 @@ export class UserForm extends Component {
             values = {values}
           />
         );
-      case 3:
+      case 4:
         return (
           <DataSharingAgreement
             nextStep={this.nextStep}
@@ -115,7 +118,7 @@ export class UserForm extends Component {
             values={values}
           />
         );
-      case 4:
+      case 5:
         return (
           <CreateAccount
             nextStep={this.nextStep}
@@ -124,7 +127,7 @@ export class UserForm extends Component {
             values={values}
           />
         );
-      case 5:
+      case 6:
         return (
           <ConfirmRegistration
             nextStep={this.nextStep}
@@ -132,14 +135,14 @@ export class UserForm extends Component {
             values={values}
           />
         );
-      case 6:
+      case 7:
         return (
         <SuccessfulRegistration
             nextStep={this.nextStep}
             values={values}
           />
         );
-      case 7:
+      case 8 :
         return <UserForm/>;
 
       default:

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import {Form} from 'react-bootstrap';
-import Button from '@material-ui/core/Button';
-import { MDBBtn } from 'mdb-react-ui-kit';
+import {Form, Button, Container} from 'react-bootstrap';
+
+
 
 
 export class SuccessfulRegistration extends Component {
@@ -14,22 +13,15 @@ export class SuccessfulRegistration extends Component {
 
   render() {
       return (
-      <MuiThemeProvider>
-        <br/>
-        <Form style={{width:"80%", marginLeft:"0%", marginTop:"0%"}}>
-            <h1>Successfully Registered!</h1>
-            <p>Thank you for Registering. Please Login</p>
-
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <MDBBtn>
-              <Button
-                onClick={this.continue}
-                >PROCEED TO LOGIN</Button>
-              </MDBBtn>
-            </div>
-        </Form>  
-        
-      </MuiThemeProvider>
+      <Container className = "App-container">
+        <form className = "App-form">
+            <h3 className = "App-title">Successfully Registered!</h3>
+            <br/>
+            <h4 className = "App-text">Thank you for Registering!</h4>
+            <br/>
+            <button type="submit" className="btn btn-success btn-lg btn-block" onClick  = {this.continue}>Proceed to Login</button>
+        </form>
+      </Container>
     );
 }
 }
