@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { List, ListItem, ListItemText } from '@material-ui/core/';
-import {Form, Button, Container} from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 
 export class ConfirmRegistration extends Component {
   continue = e => {
@@ -14,7 +13,7 @@ export class ConfirmRegistration extends Component {
   };
 
   render() {
-    const {values: { firstName, lastName, email, birthDate, address, contactNumber}}= this.props;
+    const {values: { firstName, lastName, email, date_of_birth, address, contactNumber}}= this.props;
     return (
      <Container className = "App-container">
         <form>
@@ -29,7 +28,7 @@ export class ConfirmRegistration extends Component {
               <dd class="col-sm-9">{email}</dd>
 
               <dt class="col-sm-3">BIRTH DATE:</dt>
-              <dd class="col-sm-9">{birthDate}</dd>
+              <dd class="col-sm-9">{date_of_birth}</dd>
 
               <dt class="col-sm-3">ADDRESS:</dt>
               <dd class="col-sm-9">{address}</dd>

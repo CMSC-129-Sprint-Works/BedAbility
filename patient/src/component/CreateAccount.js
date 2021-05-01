@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Container, Form, Button} from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 
 export class CreateAccount extends Component {
   continue = e => {
@@ -46,10 +46,10 @@ export class CreateAccount extends Component {
             </div>
 
             <div className="form-group">
-                <label className = "App-label">Birthdate</label>
+                <label className = "App-label">Date of Birth</label>
                 <input className="form-control"
                         type = "date"
-                        onChange={handleChange('birthDate')} 
+                        onChange={handleChange('date_of_birth')} 
                         defaultValue={values.firstName}
                         required/>
             </div>

@@ -41,9 +41,9 @@ export class Login extends Component { //
                     <button type="submit" className="btn btn-success btn-lg btn-block" onClick  = {this.continue}>Login</button>
                     <br/>
                     <p className="text-right">
-                        <a href="#" onClick = {this.forgetPass}>Forget Password?</a>
+                        <a href="./ForgetPassword" onClick = {this.forgetPass}>Forget Password?</a>
                         <br/>
-                        <a href="#" onClick = {this.createAcc}>Don't have an account? Create Account</a>
+                        <a href="./CreateAccount" onClick = {this.createAcc}>Don't have an account? Create Account</a>
                     </p>
                 </form>
             </Container>

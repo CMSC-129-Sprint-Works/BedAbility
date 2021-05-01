@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Form, Container, Button} from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 
 export class sendCode extends Component {
   continue = e => {
