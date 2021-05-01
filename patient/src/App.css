@@ -119,13 +119,3 @@
   border-radius: var(--border-radius);
   background: hsl(0, 0%, 0%);
 }
-
-.App-containervar {
-  width: 200px;
-  max-width: 400px;
-  margin: 1rem;
-  padding: 2rem;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-  border-radius: var(--border-radius);
-  background: hsl(0, 0%, 0%);
-}

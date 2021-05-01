@@ -15,7 +15,7 @@ export class CreateAccount extends Component {
   render() {
     const { values, handleChange } = this.props;
     return (
-     <Container className = "App-containervar">
+     <Container className = "App-container">
         <form>
             <h1 className = "App-welcome">Create an Account</h1>
             <br/>
