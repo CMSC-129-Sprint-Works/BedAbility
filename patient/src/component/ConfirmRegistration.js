@@ -21,19 +21,19 @@ export class ConfirmRegistration extends Component {
           <br/>
           <div className = "App-text">
             <dl class="row">
-              <dt class="col-sm-3">FULL NAME:</dt>
+              <dt class="col-sm-5">FULL NAME:</dt>
               <dd class="col-sm-9">{firstName + " " + lastName}</dd>
 
-              <dt class="col-sm-3">EMAIL ADDRESS:</dt>
+              <dt class="col-sm-5">EMAIL ADDRESS:</dt>
               <dd class="col-sm-9">{email}</dd>
 
-              <dt class="col-sm-3">BIRTH DATE:</dt>
+              <dt class="col-sm-5">DATE OF BIRTH:</dt>
               <dd class="col-sm-9">{date_of_birth}</dd>
 
-              <dt class="col-sm-3">ADDRESS:</dt>
+              <dt class="col-sm-5">ADDRESS:</dt>
               <dd class="col-sm-9">{address}</dd>
 
-              <dt class="col-sm-3">CONTACT NUMBER:</dt>
+              <dt class="col-sm-5">CONTACT NUMBER:</dt>
               <dd class="col-sm-9">{contactNumber}</dd>
             </dl>
           </div>

@@ -37,7 +37,9 @@ function App() {
                 <div class = "container">
                   <div class = "row">
                     <div class = "col-lg-7">
-                      <img src = "./bg.jpg" class = "img-fluid" alt = ""/>
+                      <div>
+                        <img src = "./bg.jpg" class = "img-fluid" alt = ""/>
+                      </div>
                     </div>
                     <div class = "col-lg-5">
                       <UserForm/>
