@@ -1,11 +1,6 @@
-/*import React, { Component } from 'react';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import {Form} from 'react-bootstrap';
-import { MDBBtn } from 'mdb-react-ui-kit';*/
 
 import React, { Component } from 'react';
-import {ThemeProvider as MuiThemeProvider, Form, Button} from 'react-bootstrap';
+import {ThemeProvider as MuiThemeProvider, Form, Button, Container} from 'react-bootstrap';
 
 
 export class HPRegister extends Component {
@@ -22,13 +17,12 @@ export class HPRegister extends Component {
   render() {
     const { values, handleChange } = this.props;
     return (
+      <Container className = "App-containerRegister">
       <MuiThemeProvider>
         <>
+        <p className = "App-title">Create an Account: Please Fill-up</p>
         <br/>
-        <br/>
-        <h3>Create an Account: Please Fill-up</h3>
-        <Form style={{width:"80%", marginLeft:"0%", marginTop:"0%"}}>
-            <br/>
+        <Form>
             <Form.Control
               placeholder="Enter Your Last Name" 
               label="Last Name" 
@@ -54,6 +48,7 @@ export class HPRegister extends Component {
               defaultValue={values.age}
               margin="normal"
               fullWidth
+              type = "date"
             />
             <br />
             <Form.Control
@@ -74,7 +69,7 @@ export class HPRegister extends Component {
               fullWidth
             />
              <br />
-                <Form.Control
+              <Form.Control
               placeholder="Enter Your Email Address"
               label="Email"
               onChange={handleChange('email')} 
@@ -114,6 +109,7 @@ export class HPRegister extends Component {
         </Form>  
         </>
       </MuiThemeProvider>
+      </Container>
     );
   }
 }

@@ -1,8 +1,4 @@
-/*import React, { Component } from 'react';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import {Form, Container} from 'react-bootstrap';
-import { MDBBtn } from 'mdb-react-ui-kit';*/
+
 import React, { Component } from 'react';
 import {ThemeProvider as MuiThemeProvider, Form, Button, Container} from 'react-bootstrap';
 
@@ -12,18 +8,21 @@ export class HPLogin extends Component {
     this.props.nextStep();
   };
 
+ forgetPass = e => {
+        e.preventDefault();
+        this.props.toForgetPassword();
+    };
+
   render() {
     const { values, handleChange } = this.props;
     return (
-      <Container className = "App-container">
+      <Container className = "App-containerLogin">
       <MuiThemeProvider>
         <>
-       
-        <br/>
-        <br/>
         <h1 className = "App-welcome">Welcome to BedAbility!</h1>
         <p className = "App-title">Please Login</p>
-        <Form style={{width:"80%", marginLeft:"0%", marginTop:"5%", marginRight:"10%"}}>
+        <br/>
+        <Form>
             <Form.Control
               placeholder="Enter Email Address" 
               label="Email" 
@@ -48,8 +47,12 @@ export class HPLogin extends Component {
                             LOGIN
                         </Button>
             </div>
-            <br />
-            <br />
+              <br />
+          <div className = "App-button">
+              <Button color="black" variant="link" onClick={this.forgetPass}>
+                  Forgot Password?
+              </Button>
+          </div> 
            <div className = "App-button">
               <Button color="black" variant="link" onClick={this.continue}>
                   Don't have an account? Create Account

@@ -1,9 +1,3 @@
-/*import React, { Component } from 'react';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import { List, ListItem, ListItemText } from '@material-ui/core/';
-import Button from '@material-ui/core/Button';
-import {Form} from 'react-bootstrap'; 
-import { MDBBtn } from 'mdb-react-ui-kit';*/
 
 import React, { Component } from 'react';
 import {ThemeProvider as MuiThemeProvider, Form, Button} from 'react-bootstrap';
@@ -32,21 +26,24 @@ export class HPConfirm extends Component {
     this.props.prevStep();
   };
 
+/*
   alert = e => {
    datashare();
   };
-
+*/
 
   render() {
     const {
       values: { email, passWord, lastName, firstName, Hkey, position, age }
     } = this.props;
     return (
+     //<Container className = "App-containerRegister">
       <MuiThemeProvider>
         <>
         <br/>
-        <h3>Please Review and Confirm to Register</h3>
-        <Form style={{width:"80%", marginLeft:"0%", marginTop:"0%"}}>
+          <p className = "App-title">Please Review and Confirm to Register</p>
+      
+        <Form style={{marginLeft:"0%", marginTop:"0%"}}>
             <List>
               <ListItem>
                 <ListItemText primary="Last Name" secondary={lastName} />
@@ -71,32 +68,23 @@ export class HPConfirm extends Component {
               </ListItem>
             </List>
 
-            <Button color="black" variant="link" onClick={this.alert}>
-                 To proceed with your regsitration, please read and agree to the Data Sharing Aggreement
-              </Button>
-            <input type="checkbox" onChange = {this.txtChange.bind(this)}/>
-            <em> I Agree to the Data Sharing Agreement</em>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
               <Button
                 color="Secondary"
                 onClick={this.back}
                 >CANCEL</Button>
-               <Button disabled = {!this.state.input}
-                color="primary"
+               <Button
+                color="Primary"
                 onClick={this.continue}
-                >CONTINUE</Button>
+                >REGISTER</Button>
             </div>
-           
-           
         </Form>  
+     
         </>
       </MuiThemeProvider>
+       //</Container>
     );
   }
 }
 
 export default HPConfirm;
-
-function datashare() {
-    alert("This is the Data Sharing Agreement")
-}
