@@ -18,8 +18,7 @@ use App\Http\Controllers\PatientPostController;
 // get(<url after home url 'www.bedability.com/'>, which action to perform from controller class)
 Route::get('/patient', [HomeController::class, 'index']);
 
-
-Route::post('/patient/formsubmit', [PatientPostController::class, 'formsubmit']);
+Route::post('/patient/sendrequest', [PatientPostController::class, 'formsubmit']);
 
 Route::get('/controller', 'PatientRegistrationController@index');
 

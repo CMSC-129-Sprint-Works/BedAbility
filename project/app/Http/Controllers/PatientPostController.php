@@ -30,6 +30,7 @@ class PatientReceiverController extends Controller
      */
     public function formsubmit(Request $request)
     {
+        console.log("form submitted somehow");
     	return response()->json([$request->all()]);
     }
 

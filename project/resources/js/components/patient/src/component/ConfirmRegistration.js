@@ -13,6 +13,21 @@ export class ConfirmRegistration extends Component {
     this.props.prevStep();
   };
 
+  handleSubmit(){
+
+    const packets = this.props;
+    console.log(packets);
+    axios.post('/patient/sendrequest', packets)
+        .then(
+            response => alert(JSON.stringify(response.data))
+
+            )
+        .catch(error => {
+            console.log("ERROR:: ",error.response.data);
+
+            });
+}
+
   render() {
     const {values: { firstName, lastName, email, birthDate, address, contactNumber}}= this.props;
     return (
@@ -40,7 +55,7 @@ export class ConfirmRegistration extends Component {
           </div>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <button type="submit" className="btn btn-success btn-lg" onClick  = {this.back}>Cancel</button>
-            <button type="submit" className="btn btn-success btn-lg mx-2" onClick  = {this.continue}>Register</button>
+            <button type="submit" className="btn btn-success btn-lg mx-2" onClick  = {(e) => {this.handleSubmit(); this.continue(e);}}>Register</button>
           </div>
         </form>
      </Container>

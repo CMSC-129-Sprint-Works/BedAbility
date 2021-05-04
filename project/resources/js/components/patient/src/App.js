@@ -3,6 +3,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col} from 'react-bootstrap';
 import UserForm from "./component/UserForm";
+import ReactDOM from 'react-dom'
+
 
 
 function App() {
@@ -27,4 +29,6 @@ function App() {
 
 export default App;
 
-ReactDOM.render(<App />, document.getElementById('app'));
+if (document.getElementById('app')) {
+    ReactDOM.render(<App />, document.getElementById('app'));
+}
