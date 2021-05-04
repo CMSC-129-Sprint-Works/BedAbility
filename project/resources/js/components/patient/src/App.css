@@ -1,0 +1,130 @@
+.App {
+  --color-error: #db1414;
+  --color-success: #00fc4c;
+  --border-radius: 4px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;  
+}
+
+.App-welcome {
+  text-align: center;
+  justify-content: flex;
+  color: rgb(1, 252, 56);
+  font-size: 20pt;
+  font-weight: bolder;
+
+}
+
+.App-title {
+  text-align: center;
+  justify-content: flex;
+  color: rgb(1, 252, 56);
+  font-size: 15pt;
+  font-weight: bolder;
+}
+
+.App-text {
+  color: rgb(255, 255, 255);
+  text-align: justify;
+  justify-content: flex;
+}
+
+.App-picture {
+  display: grid;
+  align-items: flex-start;  
+  justify-content: flex-start;
+  justify-items: flex-start;
+
+}
+
+.App-label {
+  text-align: left;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #1560f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-form {
+  display: contents;
+  width: 80%;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin-left: 20%;
+  margin-top: 20%;
+  border-radius: var(--border-radius);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.App-link {
+  color: #dddddd;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+
+  }
+}
+
+.App-button {
+  width: fit-content;
+  height: fit-content;
+  display: contents;
+  padding: 1rem 2rem;
+  margin: 5px;
+  border: none;
+  border-radius: var(--border-radius);
+  outline: none;
+  cursor: pointer;
+  outline-color: green;
+  background-color: #18c421;
+}
+
+
+.App-container {
+  width: 200px;
+  max-width: 400px;
+  margin: 10rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  background: hsl(0, 0%, 0%);
+}
+
+.App-containervar {
+  width: 200px;
+  max-width: 400px;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  background: hsl(0, 0%, 0%);
+}
