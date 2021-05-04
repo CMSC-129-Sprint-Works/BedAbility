@@ -14,7 +14,7 @@
     </head>
     <body class="antialiased">
 
-        <div id=app></div>
+        <div id=app>waw</div>
 
        <script src="js/app.js"></script>
 
