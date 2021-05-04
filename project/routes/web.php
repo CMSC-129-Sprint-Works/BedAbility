@@ -2,10 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-<<<<<<< Updated upstream
 use App\Http\Controllers\PatientPostController;
-=======
->>>>>>> Stashed changes
 
 /*
 |--------------------------------------------------------------------------
