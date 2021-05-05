@@ -5141,7 +5141,7 @@ var ConfirmRegistration = /*#__PURE__*/function (_Component) {
     value: function handleSubmit() {
       var packets = this.props;
       console.log(packets);
-      axios.post('/patient/sendrequest', packets).then(function (response) {
+      axios.post('/patient', packets).then(function (response) {
         return alert(JSON.stringify(response.data));
       })["catch"](function (error) {
         console.log("ERROR:: ", error.response.data);
