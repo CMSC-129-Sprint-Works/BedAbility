@@ -14,7 +14,6 @@ export class ConfirmRegistration extends Component {
   };
 
   handleSubmit(){
-
     const packets = this.props;
     console.log(packets);
     axios.post('/patient/sendrequest', packets)

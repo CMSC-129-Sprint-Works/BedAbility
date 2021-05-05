@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PatientReceiverController extends Controller
-{
+class PatientPostController extends Controller{
     public function formSubmitOld(Request $request){
         $validatedData = $request->validate([
             'id' => 'nullable',
@@ -30,7 +29,6 @@ class PatientReceiverController extends Controller
      */
     public function formsubmit(Request $request)
     {
-        console.log("form submitted somehow");
     	return response()->json([$request->all()]);
     }
 
