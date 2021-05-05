@@ -18,11 +18,10 @@ export class ConfirmRegistration extends Component {
     console.log(packets);
     axios.post('/patient', packets)
         .then(
-            response => alert(JSON.stringify(response.data))
+            response => (console.log(response.data))
             )
         .catch(error => {
             console.log("ERROR:: ",error.response.data);
-
             });
 }
 

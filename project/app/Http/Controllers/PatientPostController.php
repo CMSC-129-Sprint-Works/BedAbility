@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use app\Models\Patient;
+use App\Models\Patient;
+use Error;
 
 class PatientPostController extends Controller{
     public function formsubmit_old(Request $request){
@@ -28,10 +30,36 @@ class PatientPostController extends Controller{
      *
      * @return \Illuminate\Http\Response
      */
-    public function formsubmit(Request $request)
+    public function formsubmitold2(Request $request)
     {
-       //$patient = Patient::all();
-    	return response()->json([$request->all()]);
+       $patient = $request->all();
+       $patient_keys = array_keys($patient);
+       error_log($patient_keys[0]);
+       error_log(gettype($patient["values"]["passWord"]));
+       error_log(json_encode($patient));
+       Patient::Task($request->all());
+       error_log("lmao submitted");
+
+       return response()->json([$request->all()]);
     }
 
+    public function formsubmit(Request $request)
+    {
+        $data = $request->all()["values"];
+        error_log("test1");
+        $patient = new Patient;
+
+        $patient->email = $data["email"];
+        $patient->first_name = $data["firstName"];
+        $patient->last_name = $data["lastName"];
+        $patient->date_of_birth = $data["birthDate"];
+        $patient->address = $data["address"];
+        $patient->contact_number = $data["contactNumber"];
+        $patient->password = $data["passWord"];
+        $patient->save();
+        error_log(json_encode($patient));
+
+        error_log("lmao it worked");
+        return response()->json([$request->all()]);
+    }
 }

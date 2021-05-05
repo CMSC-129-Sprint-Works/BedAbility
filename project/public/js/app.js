@@ -5142,7 +5142,7 @@ var ConfirmRegistration = /*#__PURE__*/function (_Component) {
       var packets = this.props;
       console.log(packets);
       axios.post('/patient', packets).then(function (response) {
-        return alert(JSON.stringify(response.data));
+        return console.log(response.data);
       })["catch"](function (error) {
         console.log("ERROR:: ", error.response.data);
       });
