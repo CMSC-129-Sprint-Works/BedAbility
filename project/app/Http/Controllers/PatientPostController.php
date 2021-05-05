@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use app\Models\Patient;
 
 class PatientPostController extends Controller{
-    public function formsubmit(Request $request){
+    public function formsubmit_old(Request $request){
         $validatedData = $request->validate([
             'id' => 'nullable',
             'email' => 'nullable',
@@ -28,11 +28,10 @@ class PatientPostController extends Controller{
      *
      * @return \Illuminate\Http\Response
      */
-    public function formsubmit_old(Request $request)
+    public function formsubmit(Request $request)
     {
        //$patient = Patient::all();
-    	return redirect('/');
-        //response()->json([$request->all()]);
+    	return response()->json([$request->all()]);
     }
 
 }

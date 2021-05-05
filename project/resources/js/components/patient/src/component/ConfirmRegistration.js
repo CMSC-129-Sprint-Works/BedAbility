@@ -19,7 +19,6 @@ export class ConfirmRegistration extends Component {
     axios.post('/patient', packets)
         .then(
             response => alert(JSON.stringify(response.data))
-
             )
         .catch(error => {
             console.log("ERROR:: ",error.response.data);
