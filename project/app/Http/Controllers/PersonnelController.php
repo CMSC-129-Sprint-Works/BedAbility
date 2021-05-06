@@ -15,7 +15,6 @@ class PersonnelController extends Controller
     public function formsubmit(Request $request){
         $data = $request->all()["values"];
         $personnel = new Personnel;
-        error_log(json_encode($data));
 
         $personnel->email = $data["email"];
         $personnel->password = $data["passWord"];
@@ -25,7 +24,6 @@ class PersonnelController extends Controller
         $personnel->position = $data["position"];
         $personnel->date_of_birth = $data["age"];
         $personnel->save();
-        error_log(json_encode($personnel));
 
         error_log("lmao it worked");
         return response()->json([$request->all()]);
