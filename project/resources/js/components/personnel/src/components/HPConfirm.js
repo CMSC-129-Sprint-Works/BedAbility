@@ -26,6 +26,17 @@ export class HPConfirm extends Component {
     this.props.prevStep();
   };
 
+  handleSubmit(){
+    const packets = this.props;
+    console.log(packets);
+    axios.post('/personnel', packets)
+        .then(
+            response => alert(JSON.stringify(response.data))
+            )
+        .catch(error => {
+            console.log("ERROR:: ",error.response.data);
+            });
+    }
 /*
   alert = e => {
    datashare();
@@ -42,7 +53,7 @@ export class HPConfirm extends Component {
         <>
         <br/>
           <p className = "App-title">Please Review and Confirm to Register</p>
-      
+
         <Form style={{marginLeft:"0%", marginTop:"0%"}}>
             <List>
               <ListItem>
@@ -75,11 +86,11 @@ export class HPConfirm extends Component {
                 >CANCEL</Button>
                <Button
                 color="Primary"
-                onClick={this.continue}
+                onClick={(e) => {this.handleSubmit(); this.continue(e);}}
                 >REGISTER</Button>
             </div>
-        </Form>  
-     
+        </Form>
+
         </>
       </MuiThemeProvider>
        //</Container>

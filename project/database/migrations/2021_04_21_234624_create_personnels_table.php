@@ -17,12 +17,10 @@ class CreatePersonnelsTable extends Migration
             $table->id();
             $table->string('first_name');
             $table->string('last_name');
-            // change this to date of birth
-            $table->integer('age');
+            $table->date('date_of_birth');
             $table->string('position');
             $table->foreignID('hospital_id')->constrained();
             $table->string('email')->unique();
-            $table->string('contact_number')->unique();
             $table->string('password');
             $table->timestamps();
         });

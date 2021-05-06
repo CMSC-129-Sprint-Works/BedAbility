@@ -14,11 +14,7 @@
     </head>
     <body class="antialiased">
 
-        <div>
-            <p>Home</p>
-            <p>/patient for patient</p>
-            <p>/personnel for personnel</p>
-        </div>
+        <div id=personnel></div>
 
        <script src="js/app.js"></script>
 

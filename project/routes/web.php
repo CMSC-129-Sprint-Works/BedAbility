@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PatientPostController;
+use App\Http\Controllers\PatientController;
+use App\Http\Controllers\PersonnelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +17,15 @@ use App\Http\Controllers\PatientPostController;
 */
 
 // get(<url after home url 'www.bedability.com/'>, which action to perform from controller class)
-Route::get('/patient', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 
-Route::post('/patient', [PatientPostController::class, 'formsubmit']);
+Route::get('/patient', [PatientController::class, 'index']);
 
-Route::get('/controller', 'PatientRegistrationController@index');
+Route::post('/patient', [PatientController::class, 'formsubmit']);
+
+
+Route::get('/personnel', [PersonnelController::class, 'index']);
+
+Route::post('/personnel', [PersonnelController::class, 'formsubmit']);
 
 Route::view('/{path?}', 'app');

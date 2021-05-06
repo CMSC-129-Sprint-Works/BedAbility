@@ -15,7 +15,6 @@ function App() {
           <div class = "row">
             <div class = "col-lg-7">
               <img src = "./bg.jpg" class = "img-fluid" alt = ""/>
-              <p>waw2</p>
             </div>
             <div class = "col-lg-5">
               <UserForm/>
@@ -29,6 +28,6 @@ function App() {
 
 export default App;
 
-if (document.getElementById('app')) {
-    ReactDOM.render(<App />, document.getElementById('app'));
+if (document.getElementById('patient')) {
+    ReactDOM.render(<App />, document.getElementById('patient'));
 }
