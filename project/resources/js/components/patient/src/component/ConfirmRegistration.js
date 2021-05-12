@@ -12,6 +12,18 @@ export class ConfirmRegistration extends Component {
     this.props.prevStep();
   };
 
+  handleSubmit(){
+    const packets = this.props;
+    console.log(packets);
+    axios.post('/patient', packets)
+        .then(
+            response => alert(JSON.stringify(response.data))
+            )
+        .catch(error => {
+            console.log("ERROR:: ",error.response.data);
+            });
+    }
+
   render() {
     const {values: { firstName, lastName, email, date_of_birth, address, contactNumber}}= this.props;
     return (
