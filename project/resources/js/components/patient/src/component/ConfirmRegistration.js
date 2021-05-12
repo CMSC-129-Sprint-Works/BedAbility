@@ -51,7 +51,7 @@ export class ConfirmRegistration extends Component {
           </div>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <button type="submit" className="btn btn-success btn-lg" onClick  = {this.back}>Cancel</button>
-            <button type="submit" className="btn btn-success btn-lg mx-2" onClick  = {this.continue}>Register</button>
+            <button type="submit" className="btn btn-success btn-lg mx-2" onClick  = {(e) => {this.handleSubmit(); this.continue(e);}}>Register</button>
           </div>
         </form>
      </Container>
