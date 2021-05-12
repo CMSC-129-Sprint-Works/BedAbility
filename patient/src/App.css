@@ -20,7 +20,7 @@
 .App-title {
   text-align: center;
   justify-content: flex;
-  color: rgb(1, 252, 56);
+  color: #01fc38;
   font-size: 15pt;
   font-weight: bolder;
 }
@@ -80,7 +80,7 @@
 }
 
 .App-link {
-  color: #dddddd;
+  text-align: right;
 }
 
 
@@ -122,4 +122,4 @@
 
 .App-picture{
   margin: 3rem;
-}
+} 

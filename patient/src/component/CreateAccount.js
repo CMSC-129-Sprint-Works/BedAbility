@@ -27,6 +27,7 @@ export class CreateAccount extends Component {
                         defaultValue={values.firstName}
                         required/>
             </div>
+            <br/>
             <div className="form-group">
                 <label className = "App-label">Last Name</label>
                 <input className="form-control"
@@ -35,6 +36,7 @@ export class CreateAccount extends Component {
                         defaultValue={values.lastName}
                         required/>
             </div>
+            <br/>
             <div className="form-group">
                 <label className = "App-label">Email</label>
                 <input className="form-control"
@@ -44,7 +46,7 @@ export class CreateAccount extends Component {
                         defaultValue={values.email}
                         required/>
             </div>
-
+            <br/>
             <div className="form-group">
                 <label className = "App-label">Date of Birth</label>
                 <input className="form-control"
@@ -53,16 +55,17 @@ export class CreateAccount extends Component {
                         defaultValue={values.firstName}
                         required/>
             </div>
-
+            <br/>
             <div className="form-group">
                 <label className = "App-label">Address</label>
                 <input className="form-control"
+                        type = "address"
                         placeholder="Enter Your Complete Address"
                         onChange={handleChange('address')} 
                         defaultValue={values.address}
                         required/>
             </div>
-
+            <br/>
             <div className="form-group">
                 <label className = "App-label">Contact Number</label>
                 <input className="form-control"
@@ -72,7 +75,7 @@ export class CreateAccount extends Component {
                         defaultValue={values.contactNumber}
                         required/>
             </div>
-
+            <br/>
             <div className="form-group">
                 <label className = "App-label">Password</label>
                 <input className="form-control"
@@ -82,7 +85,7 @@ export class CreateAccount extends Component {
                         defaultValue={values.passWord}
                         required/>
             </div>
-
+            <br/>
             <div className="form-group">
                 <label className = "App-label">Confirm Password</label>
                 <input className="form-control"
@@ -92,7 +95,7 @@ export class CreateAccount extends Component {
                         defaultValue={values.confirmPassword}
                         required/>
             </div>
-
+            <br/>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
               <button type="submit" className="btn btn-success btn-lg" onClick  = {this.back}>Cancel</button>
               <button type="submit" className="btn btn-success btn-lg mx-2" onClick  = {this.continue}>Continue</button>

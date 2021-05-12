@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import {Container} from 'react-bootstrap'
 
@@ -31,4 +30,3 @@ export class DataSharingAgreement extends Component { //
 }
 
 export default DataSharingAgreement;
-

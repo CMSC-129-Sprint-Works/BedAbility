@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Container} from 'react-bootstrap';
 
-export class sendCode extends Component {
+export class SendCode extends Component {
   continue = e => {
     e.preventDefault();
     this.props.nextStep();
@@ -22,13 +22,14 @@ export class sendCode extends Component {
             <div className="form-group">
                 <input type="email" className="form-control" placeholder="Enter email"  onChange={handleChange('email')} defaultValue={values.email} required/>
             </div>
-
-
-            <button type="submit" className="btn btn-success btn-lg btn-block" onClick  = {this.continue}>Get Code</button>
+            <br/>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+              <button type="submit" className="btn btn-success btn-lg btn-block" onClick  = {this.continue}>Send Code</button>
+            </div>
         </form>
       </Container>
     );
   }
 }
 
-export default sendCode;
+export default SendCode;
