@@ -1,7 +1,6 @@
-
 import React, { Component } from 'react';
-import {Container, Form, Button} from 'react-bootstrap'
-import { MDBBtn } from 'mdb-react-ui-kit';
+import {Container} from 'react-bootstrap'
+
 
 export class DataSharingAgreement extends Component { //
   continue = e => {
@@ -31,4 +30,3 @@ export class DataSharingAgreement extends Component { //
 }
 
 export default DataSharingAgreement;
-

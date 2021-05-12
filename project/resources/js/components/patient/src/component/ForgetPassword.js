@@ -19,12 +19,12 @@ export class ForgetPassword extends Component {
               <label className = "App-label">Code</label>
               <input type="email" className="form-control" placeholder="Enter code"  onChange={handleChange('code')} defaultValue={values.code} required/>
           </div>
-
+          <br/>
           <div className="form-group">
               <label className = "App-label">Password</label>
               <input type="password" className="form-control" placeholder="Enter password"  onChange={handleChange('passWord')} defaultValue={values.passWord} required/>
           </div>
-
+          <br/>
           <div className="form-group">
               <input type="password" className="form-control" placeholder="Confirm password"  onChange={handleChange('confirmPassword')} defaultValue={values.confirmPassword} required/>
           </div>
