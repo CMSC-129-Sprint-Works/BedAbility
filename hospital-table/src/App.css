@@ -1,0 +1,55 @@
+.App {
+/*   text-align: center; */
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  font-size: calc(10px + 1vmin);
+}
+
+.App-logo{
+  
+}
+
+.bedability{
+  font-family:Georgia;
+  font-size: 20pt;
+  color: skyblue;
+}
+
+.bg-background {
+  background-color: darkgreen;
+}
+
+.content {
+  margin: 60px;
+  padding: 12px;
+  height: 3000px;
+}
+
+.table {
+  margin-top: 80px;
+}
+
+.color {
+  color: lawngreen;
+  text-align: center;
+}
+
+.color1 {
+  color: orange;
+  text-align: center;
+}
+
+.color2 {
+  color: red;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
