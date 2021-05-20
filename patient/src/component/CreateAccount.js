@@ -59,7 +59,7 @@ export class CreateAccount extends Component {
                 <label className = "App-label">Date of Birth</label>
                 <input className="form-control"
                         type = "date"
-                        onChange={handleChange('date_of_birth')} 
+                        onChange={handleChange('birthDate')} 
                         defaultValue={values.firstName}
                         required/>
             </div>
