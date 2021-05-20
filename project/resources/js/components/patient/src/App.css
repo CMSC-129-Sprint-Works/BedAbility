@@ -20,7 +20,7 @@
 .App-title {
   text-align: center;
   justify-content: flex;
-  color: rgb(1, 252, 56);
+  color: #01fc38;
   font-size: 15pt;
   font-weight: bolder;
 }
@@ -31,12 +31,17 @@
   justify-content: flex;
 }
 
-.App-picture {
-  display: grid;
-  align-items: flex-start;  
-  justify-content: flex-start;
-  justify-items: flex-start;
-
+.App-additionalTitle{
+  color: rgb(3, 3, 3);
+  text-align: center;
+  justify-content: flex;
+  font-size: 12pt;
+}
+.App-additionalInfo {
+  color: rgb(3, 3, 3);
+  text-align: center;
+  justify-content: flex;
+  font-size: 9pt;
 }
 
 .App-label {
@@ -57,14 +62,10 @@
 }
 
 .App-header {
-  background-color: #1560f5;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  background-color: #111;
   color: white;
+  padding: 10px;
 }
 
 .App-form {
@@ -79,7 +80,7 @@
 }
 
 .App-link {
-  color: #dddddd;
+  text-align: right;
 }
 
 
@@ -112,19 +113,13 @@
 .App-container {
   width: 200px;
   max-width: 400px;
-  margin: 10rem;
+  margin: 2rem;
   padding: 2rem;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
   border-radius: var(--border-radius);
   background: hsl(0, 0%, 0%);
 }
 
-.App-containervar {
-  width: 200px;
-  max-width: 400px;
-  margin: 1rem;
-  padding: 2rem;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-  border-radius: var(--border-radius);
-  background: hsl(0, 0%, 0%);
-}
+.App-picture{
+  margin: 3rem;
+} 

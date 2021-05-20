@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import {Container} from 'react-bootstrap';
 
@@ -32,18 +31,20 @@ export class Login extends Component { //
                         <label className = "App-label">Email</label>
                         <input type="email" className="form-control" placeholder="Enter email"  onChange={handleChange('email')} defaultValue={values.email} required/>
                     </div>
-
+                    <br/>
                     <div className="form-group">
                         <label className = "App-label">Password</label>
                         <input type="password" className="form-control" placeholder="Enter password"  onChange={handleChange('passWord')} defaultValue={values.passWord} required/>
                     </div>
-
-                    <button type="submit" className="btn btn-success btn-lg btn-block" onClick  = {this.continue}>Login</button>
                     <br/>
-                    <p className="text-right">
-                        <a href="#" onClick = {this.forgetPass}>Forget Password?</a>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="submit" className="btn btn-success btn-lg btn-block" onClick  = {this.continue}>Login</button>
+                    </div>
+                    <br/>
+                    <p className="App-link">
+                        <a href="./ForgetPassword" onClick = {this.forgetPass}>Forget Password?</a>
                         <br/>
-                        <a href="#" onClick = {this.createAcc}>Don't have an account? Create Account</a>
+                        <a href="./CreateAccount"  onClick = {this.createAcc}>Don't have an account? Create Account</a>
                     </p>
                 </form>
             </Container>
@@ -52,4 +53,3 @@ export class Login extends Component { //
 }
 
     export default Login;
-
