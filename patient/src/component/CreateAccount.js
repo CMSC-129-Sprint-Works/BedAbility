@@ -89,6 +89,7 @@ export class CreateAccount extends Component {
                 <input className="form-control"
                         placeholder="Enter your Password"
                         type = "password"
+                        id = "passwordID"
                         onChange={handleChange('passWord')} 
                         defaultValue={values.passWord}
                         required/>
@@ -99,6 +100,7 @@ export class CreateAccount extends Component {
                 <input className="form-control"
                         placeholder="Re-Enter your Password"
                         type = "password"
+                        id = "confirmPasswordID"
                         onChange={handleChange('confirmPassword')}
                         defaultValue={values.confirmPassword}
                         required/>
