@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Container} from 'react-bootstrap';
 
 export class CreateAccount extends Component {
+
   continue = e => {
     e.preventDefault();
     this.props.nextStep();
@@ -11,6 +12,12 @@ export class CreateAccount extends Component {
     e.preventDefault();
     this.props.prevStep();
   };
+
+ /* Validationcheck = e => {
+    e.preventDefault();
+    this.props.handleSubmit();
+  };*/
+
 
   render() {
     const { values, handleChange } = this.props;
@@ -44,6 +51,7 @@ export class CreateAccount extends Component {
                         type = "email"
                         onChange={handleChange('email')} 
                         defaultValue={values.email}
+
                         required/>
             </div>
             <br/>
@@ -91,13 +99,14 @@ export class CreateAccount extends Component {
                 <input className="form-control"
                         placeholder="Re-Enter your Password"
                         type = "password"
-                        onChange={handleChange('confirmPassword')} 
+                        onChange={handleChange('confirmPassword')}
                         defaultValue={values.confirmPassword}
                         required/>
             </div>
             <br/>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-              <button type="submit" className="btn btn-success btn-lg" onClick  = {this.back}>Cancel</button>
+              <button type="button" className="btn btn-success btn-lg" onClick  = {this.back}>Cancel</button>
+
               <button type="submit" className="btn btn-success btn-lg mx-2" onClick  = {this.continue}>Continue</button>
             </div>
           </form>

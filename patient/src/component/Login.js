@@ -41,10 +41,10 @@ export class Login extends Component { //
                         <button type="submit" className="btn btn-success btn-lg btn-block" onClick  = {this.continue}>Login</button>
                     </div>
                     <br/>
-                    <p className="App-link">
-                        <a href="./ForgetPassword" onClick = {this.forgetPass}>Forget Password?</a>
+                    <p className="App-link">        
+                        <a class = "link-success" href="./ForgetPassword" onClick = {this.forgetPass}>Forget Password?</a>
                         <br/>
-                        <a href="./CreateAccount"  onClick = {this.createAcc}>Don't have an account? Create Account</a>
+                        <a class = "link-success" href="./CreateAccount" onClick = {this.createAcc}>Don't have an account? Create Account</a>
                     </p>
                 </form>
             </Container>
