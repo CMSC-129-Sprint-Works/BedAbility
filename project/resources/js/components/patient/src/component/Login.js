@@ -38,13 +38,13 @@ export class Login extends Component { //
                     </div>
                     <br/>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" className="btn btn-success btn-lg btn-block" onClick  = {this.continue}>Login</button>
+                        <button type="submit" className="btn btn-success btn-lg mx-2" onClick  = {this.continue}>Login</button>
                     </div>
                     <br/>
-                    <p className="App-link">
-                        <a href="./ForgetPassword" onClick = {this.forgetPass}>Forget Password?</a>
+                    <p className="App-link">        
+                        <a class = "link-success" href="./ForgetPassword" onClick = {this.forgetPass}>Forget Password?</a>
                         <br/>
-                        <a href="./CreateAccount"  onClick = {this.createAcc}>Don't have an account? Create Account</a>
+                        <a class = "link-success" href="./CreateAccount" onClick = {this.createAcc}>Don't have an account? Create Account</a>
                     </p>
                 </form>
             </Container>

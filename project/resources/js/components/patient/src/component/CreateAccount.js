@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Container} from 'react-bootstrap';
 
 export class CreateAccount extends Component {
+
   continue = e => {
     e.preventDefault();
     this.props.nextStep();
@@ -12,8 +13,9 @@ export class CreateAccount extends Component {
     this.props.prevStep();
   };
 
+
   render() {
-    const { values, handleChange } = this.props;
+    const { values, handleChange, checkPasswordMatch } = this.props;
     return (
      <Container className = "App-container">
         <form>
@@ -51,7 +53,7 @@ export class CreateAccount extends Component {
                 <label className = "App-label">Date of Birth</label>
                 <input className="form-control"
                         type = "date"
-                        onChange={handleChange('date_of_birth')} 
+                        onChange={handleChange('birthDate')} 
                         defaultValue={values.firstName}
                         required/>
             </div>
@@ -83,6 +85,7 @@ export class CreateAccount extends Component {
                         type = "password"
                         onChange={handleChange('passWord')} 
                         defaultValue={values.passWord}
+                        id = "password"
                         required/>
             </div>
             <br/>
@@ -91,8 +94,9 @@ export class CreateAccount extends Component {
                 <input className="form-control"
                         placeholder="Re-Enter your Password"
                         type = "password"
-                        onChange={handleChange('confirmPassword')} 
+                        onChange={checkPasswordMatch('confirmPassword')}
                         defaultValue={values.confirmPassword}
+                        id = "confirm"
                         required/>
             </div>
             <br/>

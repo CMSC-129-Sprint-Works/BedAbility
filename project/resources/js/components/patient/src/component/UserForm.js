@@ -9,7 +9,6 @@ import SendCode from './SendCode'; //ask for user email and send code to verify 
 
 
 export class UserForm extends Component {
-
   state = {
     step: 1,
     email:'',
@@ -19,9 +18,18 @@ export class UserForm extends Component {
     address: '',
     position: '',
     contactNumber: null,
-    date_of_birth: null,
+    birthDate: null,
     code: null,
     confirmPassword: '',
+  };
+
+  checkPasswordMatch = () => e => {
+    const {passWord, confirmPassword} = this.state;
+    if(passWord != confirmPassword){
+      alert("Password do not match.");
+    }else{
+      this.handleChange("confirmPassword");
+    }
   };
 
   toCreateAccount = () => {
@@ -79,8 +87,8 @@ export class UserForm extends Component {
 
   render() {
     const {step} = this.state;
-    const {passWord, firstName, lastName, address, position, date_of_birth, contactNumber, code, email, confirmPassword} = this.state;
-    const values = {passWord, firstName, lastName, address, position, date_of_birth, contactNumber, code, email, confirmPassword};
+    const {passWord, firstName, lastName, address, position, birthDate, contactNumber, code, email, confirmPassword} = this.state;
+    const values = {passWord, firstName, lastName, address, position, birthDate, contactNumber, code, email, confirmPassword};
 
     switch (step) {
       case 1:

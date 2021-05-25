@@ -5,15 +5,17 @@ import 'bootstrap/dist/css/bootstrap.css';
 import {Navbar, Nav} from 'react-bootstrap'
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import UserForm from "./component/UserForm";
-import AboutUs from "./component/AboutUs";
-import ContactUs from "./component/ContactUs";
+import Hospital from "./component/Hospital";
+import PatientInfo from "./component/PatientInfo";
+
 
 function App() {
+  //use theme switcher search ni ha
   return (
     <>
       <div>
         <Router>
-          <Navbar variant="dark" expand = "lg" className = "App-header">
+          <Navbar variant="dark" bg = "background" expand = "lg" className = "App-header">
             <Navbar.Brand href="/">
               <img
                 alt=""
@@ -25,14 +27,13 @@ function App() {
               B e d A b i l i t y
             </Navbar.Brand>
             <Nav className="mr-auto">
-              <Nav.Link href="/AboutUs">About Us</Nav.Link>
-              <Nav.Link href="/ContactUs" >ContactUs</Nav.Link>
+              <Nav.Link href = "Hospital">HOSPITAL</Nav.Link>
+              <Nav.Link href = "PatientInfo">PATIENT INFO</Nav.Link>
             </Nav>
           </Navbar>
-          <br />
           <Switch>
-            <Route path="/AboutUs"><AboutUs/></Route>
-            <Route path="/ContactUs"><ContactUs/></Route>
+            <Route path="/Hospital"><Hospital/></Route>
+            <Route path="/PatientInfo"><PatientInfo/></Route>
             <Route exact path="/">
               <section class = "Form ">
                 <div class = "container">

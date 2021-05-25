@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Container} from 'react-bootstrap';
+import {values, handleChange, nextStep, prevStep} from "./UserForm";
 
 export class ConfirmRegistration extends Component {
   continue = e => {
@@ -13,7 +14,7 @@ export class ConfirmRegistration extends Component {
   };
 
   render() {
-    const {values: { firstName, lastName, email, date_of_birth, address, contactNumber}}= this.props;
+    const {values: { firstName, lastName, email, birthDate, address, contactNumber}}= this.props;
     return (
      <Container className = "App-container">
         <form>

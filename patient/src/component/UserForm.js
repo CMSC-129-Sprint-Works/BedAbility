@@ -6,11 +6,14 @@ import SuccessfulRegistration from './SuccessfulRegistration'; //  successful Re
 import DataSharingAgreement from './DataSharingAgreement'; //Data Sharing Agreement
 import ForgetPassword from './ForgetPassword';//reset password
 import SendCode from './SendCode'; //ask for user email and send code to verify the owner
+import Hospital from './Hospital';
+import PatientInfo from './PatientInfo'
 
 
 export class UserForm extends Component {
 
   state = {
+    theme: 1,
     step: 1,
     email:'',
     passWord:'',
@@ -41,9 +44,16 @@ export class UserForm extends Component {
   // Proceed to next step
   nextStep = () => {
     const { step } = this.state;
-    this.setState({
-      step: step + 1
-    });
+      if(step === 1){
+        this.setState({
+          step:step + 7
+        });
+      }
+      else{
+        this.setState({
+          step:step + 1
+        });
+      }
   };
 
   // Go back to prev step
@@ -71,6 +81,12 @@ export class UserForm extends Component {
     }
   };
 
+ /* themeSelector = () => {
+    this.setState({
+      step: step + 1
+    });
+  }*/
+
   // Handle fields change
   handleChange = input => e => {
     this.setState({ [input]: e.target.value });
@@ -81,7 +97,6 @@ export class UserForm extends Component {
     const {step} = this.state;
     const {passWord, firstName, lastName, address, position, birthDate, contactNumber, code, email, confirmPassword} = this.state;
     const values = {passWord, firstName, lastName, address, position, birthDate, contactNumber, code, email, confirmPassword};
-
     switch (step) {
       case 1:
         return (
@@ -90,6 +105,7 @@ export class UserForm extends Component {
             toForgetPassword = {this.toForgetPassword}
             toCreateAccount={this.toCreateAccount}
             handleChange={this.handleChange}
+            themeSelector = {this.themeSelector}
             values={values}
           />
         );
@@ -142,11 +158,16 @@ export class UserForm extends Component {
             values={values}
           />
         );
-      case 8 :
-        return <UserForm/>;
+      case 8:
+        return(
+          <SuccessfulRegistration
+            nextStep={this.nextStep}
+            values={values}
+          />
+        );
 
       default:
-        (console.log('This is a multi-step form built with React.'))
+        return <UserForm/>;
     }
   }
 }

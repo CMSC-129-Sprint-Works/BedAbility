@@ -22,7 +22,7 @@ function App() {
                 height="30"
                 className="d-inline-block align-top"
               />{' '}
-              BedAbility
+              B e d A b i l i t y
             </Navbar.Brand>
             <Nav className="mr-auto">
               <Nav.Link href="/AboutUs">About Us</Nav.Link>

@@ -13,4 +13,4 @@ require('./bootstrap');
  */
 
 require('./components/patient/src/App');
-require('./components/personnel/src/App');
+//require('./components/personnel/src/App');

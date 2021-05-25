@@ -35,9 +35,9 @@ export class DataSharingAgreement extends Component { //
               <h4 id="scrollspyHeading4">Data Sharing</h4>
               <p>The data that the UP Dormers Rawr had collected will be processed by the hospital involved to serve as the patient’s hospital record. The hospital agrees to process the information provided by our application solely only for the purpose of the patient’s hospital record. The hospital needs to access the patient’s data as this will serve as the patient's identity and for the hospital personnel to assess the health situation of the patient. </p>
             </div>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+            <div class="d-grid gap-2 col-6 mx-auto">
               <button type="submit" className="btn btn-success btn-lg" onClick  = {this.continue}>Agree</button>
-              <button type="submit" className="btn btn-success btn-lg mx-2" onClick  = {this.back}>Disagree</button>
+              <button type="submit" className="btn btn-success btn-lg" onClick  = {this.back}>Disagree</button>
             </div>
           </form>
       </Container>
