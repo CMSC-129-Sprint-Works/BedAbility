@@ -18,11 +18,9 @@ import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems } from './components/listItems';
-import Chart from './components/Chart';
+import { mainListItems, secondaryListItems } from './listItems';
+import Chart from './components/Chartbsxhgds chgdhgc d';
 import Deposits from './components/Deposits';
-import Modify from './components/Modify';
-import Withdraw from './components/Withdraw';
 import Orders from './components/Orders';
 
 function Copyright() {
@@ -119,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function App() {
+export default function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -145,7 +143,7 @@ export default function App() {
             <MenuIcon />
           </IconButton>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Hospital Name
+            Dashboard
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
@@ -175,22 +173,16 @@ export default function App() {
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
-          
+            {/* Chart */}
+            <Grid item xs={12} md={8} lg={9}>
+              <Paper className={fixedHeightPaper}>
+                <Chart />
+              </Paper>
+            </Grid>
             {/* Recent Deposits */}
-            <Grid item xs={12} md={4} lg={4}>
+            <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
                 <Deposits />
-              </Paper>
-            </Grid>
-            {/* Recent Deposits */}
-            <Grid item xs={12} md={4} lg={4}>
-              <Paper className={fixedHeightPaper}>
-                <Withdraw />
-              </Paper>
-            </Grid>
-            <Grid item xs={12} md={4} lg={4}>
-              <Paper className={fixedHeightPaper}>
-                <Modify />
               </Paper>
             </Grid>
             {/* Recent Orders */}
