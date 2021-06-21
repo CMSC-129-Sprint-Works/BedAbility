@@ -13,13 +13,10 @@ export class Login extends Component { //
         this.props.toForgetPassword();
     };
 
-    continue = e => {
-        e.preventDefault();
-        this.props.nextStep();
-    };
+   
 
     render() {
-        const { values, handleChange } = this.props;
+        const { values, handleChange, login} = this.props;
         return (
             <Container className = "App-container">
                 <form>
@@ -38,7 +35,7 @@ export class Login extends Component { //
                     </div>
                     <br/>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" className="btn btn-success btn-lg btn-block" onClick  = {this.continue}>Login</button>
+                        <button type="submit" className="btn btn-success btn-lg btn-block" onClick  = {login}>Login</button>
                     </div>
                     <br/>
                     <p className="App-link">        

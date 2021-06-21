@@ -63,9 +63,14 @@
 
 .App-header {
   width: 100%;
-  background-color: #111;
+  background-color: rgb(255, 255, 255);
   color: white;
-  padding: 10px;
+ 
+}
+
+.App-account {
+  justify-content: center;
+  font-size: calc(10px + 1vmin);
 }
 
 .App-form {
@@ -115,13 +120,102 @@
 .App-container {
   width: 200px;
   max-width: 400px;
-  margin: 2rem;
+  margin: 5rem;
   padding: 2rem;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
   border-radius: var(--border-radius);
   background: hsl(0, 0%, 0%);
 }
 
+.App-main{
+  width: 100px;
+  max-width: 200px;
+  margin: 7rem;
+  box-shadow: 0 0 40px rgb(0, 0, 0);
+  border-radius: var(--border-radius);
+  background: hsl(0, 0%, 99%);
+}
+
+.App-table{ 
+  margin: 7rem;
+  padding: 1rem;
+  padding-left: 5rem;
+  color:black;
+  align-content: center;
+  align-items: center;
+  box-shadow: 0 0 40px rgb(0, 0, 0);
+  border-radius: var(--border-radius);
+  background: hsl(0, 0%, 99%);
+}
 .App-picture{
   margin: 3rem;
 } 
+
+.bedability{
+  padding: 12px;
+  font-family:Georgia;
+  font-size: 20pt;
+  color: skyblue;
+}
+
+.bg-background {
+  background-color: darkgreen;
+}
+
+.content {
+  margin: 60px;
+  padding: 12px;
+  height: 3000px;
+}
+
+.color {
+  color: rgb(47, 127, 231);
+  text-align: center;
+}
+
+.color1 {
+  color: orange;
+  text-align: center;
+}
+
+.color2 {
+  color: red;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.table {
+  font-family: Arial;
+  max-width: 300px;
+  max-height: 600px;
+  display: contents;
+}
+
+table td{
+  width:800px;
+  border: 1px solid #ddd;
+  padding: 8px;
+ 
+  align-items: center;
+  align-content: center;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  border: 1px solid #ddd;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+}
