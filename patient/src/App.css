@@ -1,42 +1,52 @@
 .App {
   --color-error: #db1414;
   --color-success: #00fc4c;
-  --border-radius: 4px;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;  
+  margin-bottom: 2rem;
 }
 
 .App-welcome {
   text-align: center;
   justify-content: flex;
-  color: rgb(1, 252, 56);
+  color: rgb(20, 94, 36);
+  font-family: Georgia;
   font-size: 20pt;
   font-weight: bolder;
 
 }
 
 .App-title {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
   justify-content: flex;
-  color: #01fc38;
+  color: rgb(20, 94, 36);
   font-size: 15pt;
   font-weight: bolder;
 }
 
 .App-text {
-  color: rgb(255, 255, 255);
-  text-align: justify;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.App-list {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
   justify-content: flex;
 }
 
-.App-additionalTitle{
+
+.App-additionalTitle {
   color: rgb(3, 3, 3);
   text-align: center;
   justify-content: flex;
   font-size: 12pt;
 }
+
 .App-additionalInfo {
   color: rgb(3, 3, 3);
   text-align: center;
@@ -55,22 +65,12 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   width: 100%;
   background-color: rgb(255, 255, 255);
   color: white;
- 
-}
 
-.App-account {
-  justify-content: center;
-  font-size: calc(10px + 1vmin);
 }
 
 .App-form {
@@ -86,21 +86,10 @@
 
 .App-link {
   text-align: right;
-  color:#10d419;
+  color: #10d419;
   outline-color: #10d419;
 }
 
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-
-  }
-}
 
 .App-button {
   width: fit-content;
@@ -118,16 +107,40 @@
 
 
 .App-container {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   width: 200px;
   max-width: 400px;
   margin: 5rem;
   padding: 2rem;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-  border-radius: var(--border-radius);
-  background: hsl(0, 0%, 0%);
+  background: hsla(0, 0%, 100%, 0.329);
 }
 
-.App-main{
+.App-account {
+  justify-content: center;
+  width: 400px;
+  padding: 2rem;
+  margin: 10rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  background: hsla(0, 0%, 100%, 0.329);
+}
+
+.App-information {
+  justify-content: justify;
+  text-align: justify;
+  justify-content: flex;
+  width: 800px;
+  max-width: 400px;
+  margin: 10rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  background: hsla(0, 0%, 100%, 0.329);
+}
+
+.App-main {
   width: 100px;
   max-width: 200px;
   margin: 7rem;
@@ -136,24 +149,25 @@
   background: hsl(0, 0%, 99%);
 }
 
-.App-table{ 
+.App-table {
   margin: 7rem;
   padding: 1rem;
   padding-left: 5rem;
-  color:black;
+  color: black;
   align-content: center;
   align-items: center;
   box-shadow: 0 0 40px rgb(0, 0, 0);
   border-radius: var(--border-radius);
   background: hsl(0, 0%, 99%);
 }
-.App-picture{
-  margin: 3rem;
-} 
 
-.bedability{
+.App-picture {
+  margin: 3rem;
+}
+
+.bedability {
   padding: 12px;
-  font-family:Georgia;
+  font-family: Georgia;
   font-size: 20pt;
   color: skyblue;
 }
@@ -194,11 +208,10 @@
   display: contents;
 }
 
-table td{
-  width:800px;
+table td {
+  width: 800px;
   border: 1px solid #ddd;
-  padding: 8px;
- 
+  padding: 10px;
   align-items: center;
   align-content: center;
 }
@@ -219,3 +232,26 @@ table th {
   background-color: #4CAF50;
   color: white;
 }
+
+.vertical-scrollable> .row {
+  position: absolute;
+  top: 120px;
+  bottom: 100px;
+  left: 180px;
+  width: 50%;
+  overflow-y: scroll; 
+}
+.col-sm-8 { 
+    color: white; 
+    font-size: 24px; 
+    padding-bottom: 20px; 
+    padding-top: 18px; 
+} 
+  
+.col-sm-8:nth-child(2n+1) { 
+    background: green; 
+} 
+  
+.col-sm-8:nth-child(2n+2) { 
+    background: black; 
+} 

@@ -29,6 +29,7 @@ export class CreateAccount extends Component {
             <div className="form-group">
                 <label className = "App-label">First Name</label>
                 <input className="form-control"
+                        id = "firstName"
                         placeholder="Enter Your First Name" 
                         onChange={handleChange('firstName')} 
                         defaultValue={values.firstName}
@@ -38,6 +39,7 @@ export class CreateAccount extends Component {
             <div className="form-group">
                 <label className = "App-label">Last Name</label>
                 <input className="form-control"
+                        id = "lastName"
                         placeholder="Enter Your Last Name" 
                         onChange={handleChange('lastName')} 
                         defaultValue={values.lastName}
@@ -47,6 +49,7 @@ export class CreateAccount extends Component {
             <div className="form-group">
                 <label className = "App-label">Email</label>
                 <input className="form-control"
+                        id = "email"
                         placeholder="Enter Your Email Address" 
                         type = "email"
                         onChange={handleChange('email')} 
@@ -58,6 +61,7 @@ export class CreateAccount extends Component {
             <div className="form-group">
                 <label className = "App-label">Date of Birth</label>
                 <input className="form-control"
+                        id = "birthDate"
                         type = "date"
                         onChange={handleChange('birthDate')} 
                         defaultValue={values.firstName}
@@ -67,6 +71,7 @@ export class CreateAccount extends Component {
             <div className="form-group">
                 <label className = "App-label">Address</label>
                 <input className="form-control"
+                        id = "address"
                         type = "address"
                         placeholder="Enter Your Complete Address"
                         onChange={handleChange('address')} 
@@ -78,6 +83,7 @@ export class CreateAccount extends Component {
                 <label className = "App-label">Contact Number</label>
                 <input className="form-control"
                         placeholder="Enter Your Contact Number"
+                        id = "contactNumber"
                         htmlSize = "11"
                         onChange={handleChange('contactNumber')} 
                         defaultValue={values.contactNumber}
@@ -88,6 +94,7 @@ export class CreateAccount extends Component {
                 <label className = "App-label">Password</label>
                 <input className="form-control"
                         placeholder="Enter your Password"
+                        id = "passWord"
                         type = "password"
                         id = "passwordID"
                         onChange={handleChange('passWord')} 
@@ -100,7 +107,7 @@ export class CreateAccount extends Component {
                 <input className="form-control"
                         placeholder="Re-Enter your Password"
                         type = "password"
-                        id = "confirmPasswordID"
+                        id = "confirmPassword"
                         onChange={handleChange('confirmPassword')}
                         defaultValue={values.confirmPassword}
                         required/>
@@ -109,7 +116,7 @@ export class CreateAccount extends Component {
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
               <button type="button" className="btn btn-success btn-lg" onClick  = {this.back}>Cancel</button>
 
-              <button type="submit" className="btn btn-success btn-lg mx-2" onClick  = {this.continue}>Continue</button>
+              <button type="submit" className="btn btn-success btn-lg" onClick  = {this.continue}>Continue</button>
             </div>
           </form>
      </Container>

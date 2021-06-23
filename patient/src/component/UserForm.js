@@ -55,7 +55,7 @@ export class UserForm extends Component {
                           </div>
                         </div>
                       </div>
-                    </section>
+                    </section>  
                   </Route>
                   </Switch> 
                   </Container>
@@ -65,9 +65,9 @@ export class UserForm extends Component {
         );
       case false:
         return(
-          <div>
+          <div class = "App">
             <Router>
-              <header  className = "App-account">
+              <header>
                 <Navbar expand="lg" bg="background" variant="dark" fixed="top" className="App-headertwo">
                   <Navbar.Brand href = "/" defaultActiveKey="" >
                   <img

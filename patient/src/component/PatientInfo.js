@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import {Container} from 'react-bootstrap';
-import {values, handleChange, nextStep, prevStep} from "./UserForm";
+import {Container, ListGroup} from 'react-bootstrap';
 
-export class ConfirmRegistration extends Component {
+
+export class PatientInfo extends Component {
   continue = e => {
     e.preventDefault();
     this.props.nextStep();
@@ -14,38 +14,33 @@ export class ConfirmRegistration extends Component {
   };
 
   render() {
-    const {values: { firstName, lastName, email, birthDate, address, contactNumber}}= this.props;
+    const {values: { firstName, lastName, email, birthDate, address, contactNumber, symptoms}}= this.props;
     return (
-     <Container className = "App-container">
-        <form>
-          <h3 className = "App-title">Please confirm your registration</h3>
-          <br/>
-          <div className = "App-text">
-            <dl class="row">
-              <dt class="col-sm-5">FULL NAME:</dt>
-              <dd class="col-sm-9">{firstName + " " + lastName}</dd>
-
-              <dt class="col-sm-5">EMAIL ADDRESS:</dt>
-              <dd class="col-sm-9">{email}</dd>
-
-              <dt class="col-sm-5">DATE OF BIRTH:</dt>
-              <dd class="col-sm-9">{birthDate}</dd>
-
-              <dt class="col-sm-5">ADDRESS:</dt>
-              <dd class="col-sm-9">{address}</dd>
-
-              <dt class="col-sm-5">CONTACT NUMBER:</dt>
-              <dd class="col-sm-9">{contactNumber}</dd>
-            </dl>
-          </div>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button type="submit" className="btn btn-success btn-lg" onClick  = {this.back}>Cancel</button>
-            <button type="submit" className="btn btn-success btn-lg mx-2" onClick  = {this.continue}>Register</button>
-          </div>
-        </form>
-     </Container>
+     <div className = "App-information">
+       <h1 className = "App-title">My Information</h1><br/>
+       <div class = "row">
+       <ListGroup variant="flush" className = "App-list">
+      <ListGroup.Item><dt class="col-sm-15">NAME:</dt>
+              <dd class="col-sm-15">{firstName + " " + lastName}</dd></ListGroup.Item>
+      <ListGroup.Item><dt class="col-sm-15">EMAIL ADDRESS:</dt>
+              <dd class="col-sm-5">{email}</dd></ListGroup.Item>
+      <ListGroup.Item><dt class="col-sm-15">DATE OF BIRTH:</dt>
+              <dd class="col-sm-15">{birthDate}</dd></ListGroup.Item>
+      <ListGroup.Item><dt class="col-sm-15">ADDRESS:</dt>
+              <dd class="col-sm-15">{address}</dd></ListGroup.Item>
+      <ListGroup.Item><dt class="col-sm-15">CONTACT NUMBER:</dt>
+              <dd class="col-sm-5">{contactNumber}</dd></ListGroup.Item>
+      <ListGroup.Item><dt class="col-sm-15"> SYMPTOMS:</dt>
+              <dd class="col-sm-15">{symptoms}</dd></ListGroup.Item>
+    </ListGroup>
+    </div>
+    <div class="d-grid gap-2 col-5 mx-auto">
+            <button type="submit" className="btn btn-success btn-lg" onClick  = {this.continue}>Edit Informations</button>
+            <button type="submit" className="btn btn-success btn-lg" onClick  = {this.back}>Back to Hospital</button>
+          </div><br/>
+     </div>
     );
   }
 }
 
-export default ConfirmRegistration;
+export default PatientInfo;

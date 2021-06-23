@@ -13,14 +13,12 @@ export class Login extends Component { //
         this.props.toForgetPassword();
     };
 
-   
-
     render() {
         const { values, handleChange, login} = this.props;
         return (
             <Container className = "App-container">
                 <form>
-                    <h1 className = "App-welcome">Welcome to BedAbility!</h1>
+                    <h1 className = "App-welcome">B e d A b i l i t y</h1>
                     <br/>
                     <h3 className = "App-title">Log in</h3>
                     <br/>

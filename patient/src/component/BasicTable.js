@@ -3,7 +3,7 @@ import { useTable } from 'react-table'
 import {Container} from 'react-bootstrap'; 
 import HOSPITAL_DATA from './HOSPITAL_DATA.json'
 
-export const Table = (props) => {
+export const BasicTable = (props) => {
     const next = e => {
         e.preventDefault();
         props.nextStep();
@@ -83,4 +83,4 @@ export const Table = (props) => {
       </Container>
     )
 }
-export default Table;
+export default BasicTable;
