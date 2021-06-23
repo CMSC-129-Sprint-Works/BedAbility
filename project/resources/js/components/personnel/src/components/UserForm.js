@@ -8,6 +8,7 @@ import DataSharing from './DataSharing';
 import SendCode from './SendCode'; //ask for user email and send code to verify the owner
 import ForgetPassword from './ForgetPassword';//reset password
 import HPSuccesspw from './HPSuccesspw';//reset password
+import Dashboard  from './Dashboard';
 
 export class UserForm extends Component {
   state = {
@@ -55,12 +56,14 @@ export class UserForm extends Component {
     }
   };
 
+  
   toForgetPassword = () => {
     const {step} = this.state;
     this.setState({
       step:step + 5
     });
   };
+  
   // Handle fields change
   handleChange = input => e => {
     this.setState({ [input]: e.target.value });
@@ -77,6 +80,7 @@ export class UserForm extends Component {
           <HPLogin
             nextStep={this.nextStep}
             toForgetPassword = {this.toForgetPassword}
+           // login = {this.login}
             handleChange={this.handleChange}
             values={values}
           />

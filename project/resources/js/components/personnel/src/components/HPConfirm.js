@@ -29,13 +29,13 @@ export class HPConfirm extends Component {
   handleSubmit(){
     const packets = this.props;
     console.log(packets);
-    axios.post('/personnel', packets)
+   /* axios.post('/personnel', packets)
         .then(
             response => alert(JSON.stringify(response.data))
             )
         .catch(error => {
             console.log("ERROR:: ",error.response.data);
-            });
+            }); */
     }
 /*
   alert = e => {
