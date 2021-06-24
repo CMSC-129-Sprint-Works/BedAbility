@@ -120,7 +120,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Dashboard() {
+export default function Dashboard({visible, onCancel, onOk}) {
+  
+  visible={visible}
+  onOk={onOk}
+  onCancel={onCancel}
+
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -130,6 +135,7 @@ export default function Dashboard() {
     setOpen(false);
   };
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+
 
   return (
     <div className={classes.root}>

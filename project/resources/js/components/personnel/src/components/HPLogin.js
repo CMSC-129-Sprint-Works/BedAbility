@@ -3,23 +3,22 @@ import React, { Component } from 'react';
 import {ThemeProvider as MuiThemeProvider, Form, Button, Container} from 'react-bootstrap';
 import Dashboard  from './Dashboard';
 
+////////////////////
 export class HPLogin extends Component {
-  continue = e => {
+  
+
+continue = e => {
     e.preventDefault();
     this.props.nextStep();
   };
 
- forgetPass = e => {
+forgetPass = e => {
         e.preventDefault();
         this.props.toForgetPassword();
     };
- login = e => {
-  e.preventDefault();
-  this.props.toForgetPassword();
- }
  
   render() {
-    const { values, handleChange } = this.props;
+    const { values, handleChange, toLogin } = this.props;
     return (
       <Container className = "App-containerLogin">
       <MuiThemeProvider>
@@ -48,9 +47,9 @@ export class HPLogin extends Component {
             />
             <br />
             <div class="d-grid gap-2 col-6 mx-auto">
-                        <Button className = "App-button" color="black" type="Submit" >
-                            LOGIN 
-                        </Button>
+            <Button color="black" onClick  = {toLogin}>
+                  LOGIN
+              </Button>
             </div>
               <br />
           <div className = "App-button">
