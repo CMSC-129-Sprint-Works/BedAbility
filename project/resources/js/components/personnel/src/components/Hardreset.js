@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge';
-import Container from '@material-ui/core/Container';
+
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
@@ -32,8 +32,8 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 import PeopleIcon from '@material-ui/icons/People';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import {ThemeProvider as MuiThemeProvider, Form, Button, Container} from 'react-bootstrap';
 //import React, { Component } from 'react';
-
 
 function Copyright() {
   return (
@@ -129,11 +129,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Dashboard({visible, onCancel, onOk, toDash, toReset}) {
+
+export default function Hardreset ({visible, onCancel, onOk, toDash, toReset}){
   
-  visible={visible}
-  onOk={onOk}
-  onCancel={onCancel}
 
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
@@ -144,10 +142,12 @@ export default function Dashboard({visible, onCancel, onOk, toDash, toReset}) {
     setOpen(false);
   };
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
-  //const { values, handleChange, toDash, toReset } = this.props;
+
+
   
+  
+
   return (
-    
     <div className={classes.root}>
       <CssBaseline />
       <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
@@ -182,10 +182,9 @@ export default function Dashboard({visible, onCancel, onOk, toDash, toReset}) {
           <IconButton onClick={handleDrawerClose}>
             <ChevronLeftIcon />
           </IconButton>
-        </div> 
+        </div>
         <Divider />
-        <div>
-    <ListItem button onClick  = {toDash}>
+        <ListItem button onClick  = {toDash}>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
@@ -211,42 +210,43 @@ export default function Dashboard({visible, onCancel, onOk, toDash, toReset}) {
       </ListItemIcon>
       <ListItemText primary="Log Out" />
     </ListItem>
-  
-  </div>
       </Drawer>
-      
       <main className={classes.content}>
-        <div className={classes.appBarSpacer} />
-        <Container maxWidth="lg" className={classes.container}>
-          <Grid container spacing={3}>
-          
-            {/* Recent Deposits */}
-            <Grid item xs={12} md={4} lg={4}>
-              <Paper className={fixedHeightPaper}>
-                <Deposits />
-              </Paper>
-            </Grid>
-            {/* Recent Deposits */}
-            <Grid item xs={12} md={4} lg={4}>
-              <Paper className={fixedHeightPaper}>
-                <Withdraw />
-              </Paper>
-            </Grid>
-            <Grid item xs={12} md={4} lg={4}>
-              <Paper className={fixedHeightPaper}>
-                <Modify />
-              </Paper>
-            </Grid>
-            {/* Recent Orders */}
-            <Grid item xs={12}>
-              <Paper className={classes.paper}>
-                <Orders />
-              </Paper>
-            </Grid>
-          </Grid>
-          <Box pt={4}>
-            <Copyright />
-          </Box>
+      <Container className={classes.container}>   
+        <p className = "App-title">Modifying of Data</p>
+        <br/>
+        <Form>
+            <Form.Control
+              placeholder="Enter Total Number of Beds" 
+              label="total" 
+             
+              margin="normal"
+              fullWidth
+            />
+            <br />
+            <Form.Control
+              placeholder="Enter Number of Available Beds"
+              label="avail" 
+             
+              margin="normal"
+              fullWidth
+            />
+            <br />
+            <Form.Control
+              placeholder="Enter Number of Occuppied Beds"
+              label="occup" 
+           
+              margin="normal"
+              fullWidth
+            />
+            <br />
+            <div class="d-grid gap-2 col-6 mx-auto">
+            <Button color="black">
+                  SAVE
+              </Button>
+            </div>
+              <br />
+        </Form>
         </Container>
       </main>
     </div>

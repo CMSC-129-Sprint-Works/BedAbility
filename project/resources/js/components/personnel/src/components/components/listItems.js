@@ -4,9 +4,9 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+
 import PeopleIcon from '@material-ui/icons/People';
-import BarChartIcon from '@material-ui/icons/BarChart';
+
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
@@ -20,7 +20,8 @@ export const mainListItems = (
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <LayersIcon />
+      <AssignmentIcon />
+       
       </ListItemIcon>
       <ListItemText primary="Admission Requests" />
     </ListItem>
@@ -28,31 +29,17 @@ export const mainListItems = (
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
-      <ListItemText primary="Authorized Personnel" />
+      <ListItemText primary="Data Reset" />
     </ListItem> 
+   
+    <ListSubheader inset></ListSubheader>
+    <ListItem button>
+      <ListItemIcon>
+      <LayersIcon />
+      </ListItemIcon>
+      <ListItemText primary="Log Out" />
+    </ListItem>
+  
   </div>
-);
 
-export const secondaryListItems = (
-  <div>
-    <ListSubheader inset>Hopsital Personnel</ListSubheader>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Profile" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Settings" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Log-Out" />
-    </ListItem>
-  </div>
 );

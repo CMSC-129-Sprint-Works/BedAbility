@@ -3,6 +3,7 @@ import {Navbar, Nav, Container} from 'react-bootstrap'
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Account from "./Account";
 import Dashboard from "./Dashboard"
+import Functionality from "./Functionality"
 //import BasicTable from './BasicTable'; 
 //import PatientInfo from "./PatientInfo";
 
@@ -64,9 +65,9 @@ export class UserForm extends Component {
             <Router>
            
                   <Switch>
-                    <Route path = "/Dashboard">Dashboard</Route>
-                    <Route path = "/Dashboard">Dashboard</Route>
-                    <Route exact path="/"><Dashboard/></Route>
+                    <Route path = "/Functionality">Functionality</Route>
+                    <Route path = "/Functionality">Functionality</Route>
+                    <Route exact path="/"><Functionality/></Route>
                   </Switch> 
                 
               </Router>
