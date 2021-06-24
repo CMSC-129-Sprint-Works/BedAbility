@@ -142,3 +142,31 @@
   text-align: justify;
   justify-content: flex;
 }
+.App-Logo{
+    height: 100vh; /* Magic here */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.App-Pic{
+  align-items: center;
+  justify-content: center;
+  padding-top: 50 rem;
+}
+
+.App-main {
+  width: 100px;
+  max-width: 200px;
+  margin: 7rem;
+  box-shadow: 0 0 40px rgb(0, 0, 0);
+  border-radius: var(--border-radius);
+  background: hsl(0, 0%, 99%);
+}
+
+.App-header {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: white;
+
+}

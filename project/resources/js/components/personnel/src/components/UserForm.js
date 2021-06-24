@@ -44,7 +44,7 @@ export class UserForm extends Component {
                         <div class = "row">
                           <div class = "col-lg-7">
                             <div>
-                              <img src = "./img/bedappicon.ico" class = "img-fluid" alt = ""/>
+                              <img src = "./img/bg.jpg" class = "img-fluid" alt = ""/>
                             </div>
                           </div>
                           <div class = "col-lg-5">
@@ -56,7 +56,7 @@ export class UserForm extends Component {
                   </Route>
                   </Switch> 
                   </Container>
-                  </header>
+                </header>
               </Router>
           </div>
         );
