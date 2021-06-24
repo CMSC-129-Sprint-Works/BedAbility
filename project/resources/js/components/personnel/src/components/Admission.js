@@ -32,7 +32,11 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 import PeopleIcon from '@material-ui/icons/People';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
-import {ThemeProvider as MuiThemeProvider, Form, Button, Container} from 'react-bootstrap';
+import {ThemeProvider as MuiThemeProvider, Form, Button} from 'react-bootstrap';
+import { useMemo } from 'react'
+import { useTable } from 'react-table' 
+import {Container} from 'react-bootstrap'; 
+import HOSPITAL_DATA from './HOSPITAL_DATA.json'
 //import React, { Component } from 'react';
 
 function Copyright() {
@@ -40,15 +44,37 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        BedAbility
+        Your Website
       </Link>{' '}
-      {new Date().getDate()}
+      {new Date().getFullYear()}
       {'.'}
     </Typography>
   );
 }
 
 const drawerWidth = 240;
+
+const COLUMNS = [
+    {
+        Header: 'HOSPITAL NAME',
+        accessor: 'hospital_name'
+    },
+    {
+        Header: 'TOTAL BED CAPACITY',
+        accessor: 'total_bed_capacity'
+    },
+    {
+        Header: 'CURRENT BED COUNT',
+        accessor: 'current_bed_count'
+    },
+    {
+        Header: 'BED AVAILABILITY STATUS',
+        accessor: 'bed_availability_status'
+    }
+]
+  //memorizes the output of the function
+ 
+  
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -130,8 +156,25 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function Hardreset ({visible, onCancel, onOk, toDash, toReset, toView}){
+export default function Admission ({visible, onCancel, onOk, toDash, toReset, toView}){
   
+const columns = useMemo (() => COLUMNS, [])
+const data = useMemo (() => HOSPITAL_DATA, []) // the data isn't recreated on every render
+  
+const tableInstance = useTable({
+    //object properties       
+    columns,
+    data
+})
+
+//functions and arrays that the useTable hook from react table package has given to us to enable easy table creation
+const { 
+    getTableProps, 
+    getTableBodyProps,
+    headerGroups, 
+    rows, 
+    prepareRow
+} = tableInstance  
 
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
@@ -143,9 +186,6 @@ export default function Hardreset ({visible, onCancel, onOk, toDash, toReset, to
   };
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
-
-  
-  
 
   return (
     <div className={classes.root}>
@@ -196,7 +236,7 @@ export default function Hardreset ({visible, onCancel, onOk, toDash, toReset, to
       </ListItemIcon>
       <ListItemText primary="Data Reset" />
     </ListItem>
-    <ListItem button onClick  = {toView}>
+    <ListItem button>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
@@ -211,43 +251,41 @@ export default function Hardreset ({visible, onCancel, onOk, toDash, toReset, to
       <ListItemText primary="Log Out" />
     </ListItem>
       </Drawer>
+     
       <main className={classes.content}>
-      <Container className={classes.container}>   
-        <p className = "App-title">Modifying of Data</p>
-        <br/>
-        <Form>
-            <Form.Control
-              placeholder="Enter Total Number of Beds" 
-              label="total" 
-             
-              margin="normal"
-              fullWidth
-            />
-            <br />
-            <Form.Control
-              placeholder="Enter Number of Available Beds"
-              label="avail" 
-             
-              margin="normal"
-              fullWidth
-            />
-            <br />
-            <Form.Control
-              placeholder="Enter Number of Occuppied Beds"
-              label="occup" 
-           
-              margin="normal"
-              fullWidth
-            />
-            <br />
-            <div class="d-grid gap-2 col-6 mx-auto">
-            <Button color="black">
-                  SAVE
-              </Button>
-            </div>
-              <br />
-        </Form>
-        </Container>
+      <Container className = "table">
+        <table {...getTableProps}>
+            {/* //render the list of elements in any other components*/}
+            <thead>
+                {headerGroups.map((headerGroup) => (
+                    <tr {...headerGroup.getHeaderGroupProps()}>
+                        {headerGroup.headers.map(( column) => (
+                            <th {...column.getHeaderProps()}> {column.render('Header')} </th>
+                        ))}
+                    </tr>
+                ))}
+            </thead>
+
+            <tbody {...getTableBodyProps}>
+                {
+                    rows.map(row => {
+                        prepareRow(row)
+                        return(
+                            <tr {...row.getRowProps()}>
+                                {
+                                    //access individual row cell
+                                    row.cells.map(cell => {
+                                        return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                                    }) 
+                                }
+                            </tr>
+                        )
+                    })
+                }
+            </tbody>
+        </table>
+
+      </Container>
       </main>
     </div>
   );

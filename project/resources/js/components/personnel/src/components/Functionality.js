@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import Dashboard from './Dashboard'; //  login
 import Hardreset from './Hardreset'; // register
-
+import Admission from './Admission';
 export class Functionality extends Component {
   state = {
     step: 100, 
@@ -22,6 +22,13 @@ export class Functionality extends Component {
             step:200
           });
     };
+
+    toView = () => {
+        const { step } = this.state;
+        this.setState({
+            step:300
+          });
+    };
   
   // Handle fields change
   handleChange = input => e => {
@@ -39,6 +46,7 @@ export class Functionality extends Component {
           <Dashboard
             toDash={this.toDash}
             toReset={this.toReset}
+            toView={this.toView}
             handleChange={this.handleChange}
           />
         );
@@ -47,10 +55,21 @@ export class Functionality extends Component {
         <Hardreset
             toDash={this.toDash}
             toReset={this.toReset}
+            toView={this.toView}
             handleChange={this.handleChange}
             values={values}
           /> 
         );
+
+        case 300:
+            return (
+            <Admission
+                toDash={this.toDash}
+                toReset={this.toReset}
+                toView={this.toView}
+                handleChange={this.handleChange}
+              /> 
+            );
 
       default:
         (console.log('This is a multi-step form built with React.'))

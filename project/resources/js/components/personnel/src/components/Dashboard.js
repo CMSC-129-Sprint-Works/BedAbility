@@ -40,9 +40,9 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        BedAbility
       </Link>{' '}
-      {new Date().getFullYear()}
+      {new Date().getFullYear}
       {'.'}
     </Typography>
   );
@@ -129,7 +129,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Dashboard({visible, onCancel, onOk, toDash, toReset}) {
+export default function Dashboard({visible, onCancel, onOk, toDash, toReset, toView}) {
   
   visible={visible}
   onOk={onOk}
@@ -197,7 +197,7 @@ export default function Dashboard({visible, onCancel, onOk, toDash, toReset}) {
       </ListItemIcon>
       <ListItemText primary="Data Reset" />
     </ListItem>
-    <ListItem button>
+    <ListItem button onClick  = {toView}>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>

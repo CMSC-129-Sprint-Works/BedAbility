@@ -1,0 +1,15 @@
+[
+    { "hospital_name":" ", "total_bed_capacity": " ", "current_bed_count": " " , "bed_availability_status": " "},
+    { "hospital_name":"Cebu Doctor's Hospital", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"A v a i l a b l e"},
+    { "hospital_name":"St. Vincent General Hospital", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"C r i t i c a l"},
+    { "hospital_name":"Sacred Heart Hospital", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"F u l l"},
+    { "hospital_name":"Cebu Velez General Hospital", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"A v a i l a b l e"},
+    { "hospital_name":"Vicente Sotto Memorial Medical Center", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"A v a i l a b l e"},
+    { "hospital_name":"Doctors Specialty Reactive Medical & Diagnostic", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"C r i t i c a l"},
+    { "hospital_name":"Cebu City Medical Center", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"A v a i l a b l e"},
+    { "hospital_name":"Perpetual Soccour Hospital", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"F u l l"},
+    { "hospital_name":"Metro – Cebu Community Hospital", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"A v a i l a b l e"},
+    { "hospital_name":"Visayas Community Medical Center", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"F u l l"},
+    { "hospital_name":"Miller Sanitarium & Hospital", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"A v a i l a b l e"},
+    { "hospital_name":"Vicente Gullas Memorial Hospital", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"C r i t i c a l"}
+]

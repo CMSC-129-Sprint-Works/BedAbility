@@ -72,7 +72,7 @@ export class HPConfirm extends Component {
                 <ListItemText primary="Hospital key" secondary={Hkey} />
               </ListItem>
               <ListItem>
-                <ListItemText primary="Username" secondary={email} />
+                <ListItemText primary="Email" secondary={email} />
               </ListItem>
               <ListItem>
                 <ListItemText primary="Password" secondary={passWord} />
