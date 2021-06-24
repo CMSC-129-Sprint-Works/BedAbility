@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {Container} from 'react-bootstrap';
+import LoginButton from './LoginButton';
+
 
 
 export class Login extends Component { //
@@ -11,6 +13,11 @@ export class Login extends Component { //
     forgetPass = e => {
         e.preventDefault();
         this.props.toForgetPassword();
+    };
+
+    loginto = e => {
+        e.preventDefault();
+        this.props.toLogin();
     };
 
     render() {
@@ -32,9 +39,7 @@ export class Login extends Component { //
                         <input type="password" className="form-control" placeholder="Enter password"  onChange={handleChange('passWord')} defaultValue={values.passWord} required/>
                     </div>
                     <br/>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" className="btn btn-success btn-lg btn-block" onClick  = {login}>Login</button>
-                    </div>
+                    <LoginButton login = {login}    />
                     <br/>
                     <p className="App-link">        
                         <a class = "link-success" href="./ForgetPassword" onClick = {this.forgetPass}>Forget Password?</a>

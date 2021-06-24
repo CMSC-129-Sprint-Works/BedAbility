@@ -1,166 +1,57 @@
-import React, {Component} from 'react';
-import Login from './Login'; //  login
-import CreateAccount from './CreateAccount'; // register
-import ConfirmRegistration from "./ConfirmRegistration"; //confirm registration
-import SuccessfulRegistration from './SuccessfulRegistration'; //  successful Registration
-import DataSharingAgreement from './DataSharingAgreement'; //Data Sharing Agreement
-import ForgetPassword from './ForgetPassword';//reset password
-import SendCode from './SendCode'; //ask for user email and send code to verify the owner
+import React, {Component } from 'react';
+import {Navbar, Nav, Container} from 'react-bootstrap'
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import UserFormApp from './UserFormApp'; 
 
 export class Application extends Component {
-  state = {
-    step: 1,
-    errors: '',
-    email:'',
-    passWord:'',
-    firstName: '',
-    lastName: '',
-    address: '',
-    position: '',
-    contactNumber: null,
-    birthDate: null,
-    code: null,
-    confirmPassword: '',
-  };
-
-  toCreateAccount = () => {
-    const {step} = this.state;
-    this.setState({
-      step: step + 3
-    });
-  };
-
-  toForgetPassword = () => {
-    const {step} = this.state;
-    this.setState({
-      step:step + 1
-    });
-  };
-
-  // Proceed to next step
-  nextStep = () => {
-    const { step } = this.state;
-      if(step === 1){
-        this.setState({
-          step:step + 7
-        });
-      }
-      else{
-        this.setState({
-          step:step + 1
-        });
-      }
-  };
-
-  // Go back to prev step
-  prevStep = () => {
-    const { step } = this.state;
-    if(step === 3){
-      this.setState({
-        step: step - 2
-      });
-    }
-    else if(step === 5){
-      this.setState({
-        step:step - 4
-      });
-    }
-    else if(step === 4){
-      this.setState({
-        step:step - 3
-      });
-    }
-    else{
-      this.setState({
-        step: step - 1
-      });
-    }
-  };
-
   login = e => {
-    e.preventDefault();
-    this.props.themeSelector();
-};
-
-  // Handle fields change
-  handleChange = input => e => {
-    this.setState({ [input]: e.target.value });
-  };  
-  
+    this.props.handleLoginClick();
+  };
   render() {
-    const {errors} = this.state;
-    const {step} = this.state;
-    const {passWord, firstName, lastName, address, birthDate, contactNumber, code, email, confirmPassword} = this.state;
-    const values = {passWord, firstName, lastName, address, birthDate, contactNumber, code, email, confirmPassword};
-    switch (step) {
-      case 1:
-        return (
-          <Login
-            nextStep = {this.nextStep}
-            toForgetPassword = {this.toForgetPassword}
-            toCreateAccount={this.toCreateAccount}
-            handleChange={this.handleChange}
-            values={values}
-            errors = {errors}
-            login = {this.login}
-          />
-        );
-      case 2: 
-        return (
-          <SendCode
-            nextStep = {this.nextStep}
-            handleChange={this.handleChange}
-            errors = {errors}
-            values = {values}
-          />
-        );
-      case 3: 
-        return (
-          <ForgetPassword
-            prevStep = {this.prevStep}
-            handleChange={this.handleChange}
-            errors = {errors}
-            values = {values}
-          />
-        );
-      case 4:
-        return (
-          <DataSharingAgreement
-            nextStep={this.nextStep}
-            prevStep={this.prevStep}
-            handleChange={this.handleChange}
-            values={values}
-          />
-        );
-      case 5:
-        return (
-          <CreateAccount
-            nextStep={this.nextStep}
-            prevStep={this.prevStep}
-            handleChange={this.handleChange}
-            errors = {errors}
-            values={values}
-          />
-        );
-      case 6:
-        return (
-          <ConfirmRegistration
-            nextStep={this.nextStep}
-            prevStep={this.prevStep}
-            values={values}
-          />
-        );
-      case 7:
-        return (
-        <SuccessfulRegistration
-            nextStep={this.nextStep}
-            values={values}
-            themeSelector = {this.themeSelector}
-          />
-        );
-      default:
-        return <Application/>;
-    }
+    const {values, handleChange} = this.props;
+    return(
+      <div>
+        <Router>
+          <header  className="App-header">
+            <Navbar expand="lg" bg="background" variant="dark" fixed="top" className="App-headertwo">
+              <Navbar.Brand href = "/" defaultActiveKey="" >
+              <img
+                    alt=""
+                    src="/bedAbility.ico"
+                    width="30"
+                    height="30"
+                    className="d-inline-block align-top"
+                  />{' '}
+                  <text className="bedability">B e d A b i l i t y</text>
+              </Navbar.Brand>
+              </Navbar>
+              <Container className = "App-main">
+              <Switch>
+                <Route exact path="/">
+                <section class = "Form ">
+                  <div class = "container">
+                    <div class = "row">
+                      <div class = "col-lg-7">
+                        <div>
+                          <img src = "./bg.jpg" class = "img-fluid" alt = ""/>
+                        </div>
+                      </div>
+                      <div class = "col-lg-5">
+                        <UserFormApp 
+                        values = {values}
+                        handleChange = {this.handleChange}
+                        login = {this.login}/>
+                      </div>
+                    </div>
+                  </div>
+                </section>  
+              </Route>
+              </Switch> 
+              </Container>
+              </header>
+          </Router>
+      </div>
+    );
   }
 }
 

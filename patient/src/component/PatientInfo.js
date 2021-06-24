@@ -14,7 +14,8 @@ export class PatientInfo extends Component {
   };
 
   render() {
-    const {values: { firstName, lastName, email, birthDate, address, contactNumber, symptoms}}= this.props;
+    const {values: {firstName, lastName, email, birthDate, address, contactNumber, symptoms}}= this.props;
+    
     return (
      <div className = "App-information">
        <h1 className = "App-title">My Information</h1><br/>

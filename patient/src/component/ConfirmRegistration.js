@@ -21,7 +21,7 @@ export class ConfirmRegistration extends Component {
           <h3 className = "App-title">Please confirm your Registration</h3>
           <br/>
           <div className = "App-list">
-            <div class="row-sm-5">
+            <div class="row">
               <dt className ="col-sm-5">FULL NAME:</dt>
               <dd class="col-sm-5">{firstName + " " + lastName}</dd>
 
@@ -39,8 +39,8 @@ export class ConfirmRegistration extends Component {
             </div>
           </div>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button type="submit" className="btn btn-success btn-lg" onClick  = {this.continue}>Register</button>
             <button type="submit" className="btn btn-success btn-lg" onClick  = {this.back}>Cancel</button>
+            <button type="submit" className="btn btn-success btn-lg" onClick  = {this.continue}>Register</button>
           </div>
         </form>
      </Container>

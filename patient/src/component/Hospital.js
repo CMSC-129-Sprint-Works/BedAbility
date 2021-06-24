@@ -13,7 +13,7 @@ export class Hospital extends Component {
   }
 
   render() {
-    const {values: { currentTime}}= this.props;
+    const {values: {currentTime}}= this.props;
     
     return (
       <Card className = "App-account">
@@ -23,8 +23,8 @@ export class Hospital extends Component {
             <h5>{"As of " + currentTime}</h5> 
           </div><br/>
           <div class="d-grid gap-2 col-4 mx-auto">
-              <button type="button" className="btn btn-success btn-lg" onClick  = {this.back}>Cancel</button>
               <button type="submit" className="btn btn-success btn-lg" onClick  = {this.continue}>Continue</button>
+              <button type="button" className="btn btn-success btn-lg" onClick  = {this.back}>Cancel</button>
           </div>
       </Card.Body>
     </Card>

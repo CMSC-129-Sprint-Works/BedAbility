@@ -4,9 +4,9 @@ import {Container} from 'react-bootstrap';
 
 export class SuccessfulRegistration extends Component {
   
-  continue = e => {
+  back = e => {
     e.preventDefault();
-    this.props.nextStep();
+    this.props.prevStep();
   };
 
   render() {
@@ -19,7 +19,7 @@ export class SuccessfulRegistration extends Component {
             <h4 className = "App-text">{"Thank you for registering " + firstName + "!"}</h4>
             <br/>
             <div class = "d-grid gap-2 d-md-flex justify-content-md-center">
-              <button type="submit" className="btn btn-success btn-lg btn-block" onClick  = {this.continue}>Proceed to Login</button>
+              <button type="submit" className="btn btn-success btn-lg btn-block" onClick  = {this.back}>Proceed to Login</button>
             </div>
         </form>
       </Container>

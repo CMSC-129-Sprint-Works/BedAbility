@@ -24,7 +24,7 @@ export class DataSharingAgreement extends Component { //
               <p>UP Dormers Rawr is a group of students that aims to help the country with the application they have developed. The Hospital personnel can access certain information as it is needed for the patient’s hospital record. The UP Dormers Rawr and the hospital propose this agreement with regards to the hospital’s access of patient’s information.</p>
               <h4 id="scrollspyHeading2">Data Collection</h4>
               <p>The data that the UP Dormers Rawr collected are those information that the user of this application had inputted including in the signing up for an account and in the admission request form. No information will be collected from the users of the application until they have agreed to the Data Sharing Agreement. We ensure that we will only require what is completely necessary for the application to perform its functions. </p>
-              <h4 id="scrollspyHeading3">what information we collect?</h4>
+              <h4 id="scrollspyHeading3">What information we collect?</h4>
               <p>To register an account, the user is required to input the following information:</p>
               <p>Complete Name</p>
               <p>Age</p>

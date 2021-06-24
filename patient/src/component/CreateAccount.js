@@ -13,10 +13,6 @@ export class CreateAccount extends Component {
     this.props.prevStep();
   };
 
- /* Validationcheck = e => {
-    e.preventDefault();
-    this.props.handleSubmit();
-  };*/
 
 
   render() {
