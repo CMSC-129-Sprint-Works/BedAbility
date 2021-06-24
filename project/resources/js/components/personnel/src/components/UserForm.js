@@ -43,9 +43,7 @@ export class UserForm extends Component {
                       <div class = "container">
                         <div class = "row">
                           <div class = "col-lg-7">
-                            <div>
-                              <img src = "./img/bg.jpg" class = "img-fluid" alt = ""/>
-                            </div>
+                              <img src = "./img/bg.jpg"  className = "App-Pic"  alt = ""/>
                           </div>
                           <div class = "col-lg-5">
                             <Account themeSelector = {this.themeSelector}/>

@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import {ThemeProvider as MuiThemeProvider, Form, Button} from 'react-bootstrap';
-import { List, ListItem, ListItemText } from '@material-ui/core/';
+import { List, ListItem, ListItemText, Container } from '@material-ui/core/';
 
 
 export class HPConfirm extends Component {
@@ -48,7 +48,7 @@ export class HPConfirm extends Component {
       values: { email, passWord, lastName, firstName, Hkey, position, age }
     } = this.props;
     return (
-     //<Container className = "App-containerRegister">
+     <Container className = "App-containerLogin">
       <MuiThemeProvider>
         <>
         <br/>
@@ -93,7 +93,7 @@ export class HPConfirm extends Component {
 
         </>
       </MuiThemeProvider>
-       //</Container>
+       </Container>
     );
   }
 }

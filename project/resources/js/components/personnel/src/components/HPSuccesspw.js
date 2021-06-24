@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {ThemeProvider as MuiThemeProvider, Form, Button} from 'react-bootstrap';
+import {ThemeProvider as MuiThemeProvider, Form, Button, Container} from 'react-bootstrap';
 
 export class HPSuccesspw extends Component {
   
@@ -10,6 +10,8 @@ export class HPSuccesspw extends Component {
 
   render() {
       return (
+      <Container className = "App-containerLogin">
+      
       <MuiThemeProvider>
        
         <br/>
@@ -28,6 +30,7 @@ export class HPSuccesspw extends Component {
         </Form>  
         
       </MuiThemeProvider>
+      </Container>
     );
 }
 }

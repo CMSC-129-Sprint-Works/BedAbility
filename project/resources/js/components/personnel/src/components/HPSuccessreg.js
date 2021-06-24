@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import {ThemeProvider as MuiThemeProvider, Form, Button} from 'react-bootstrap';
+import {ThemeProvider as MuiThemeProvider, Form, Button, Container} from 'react-bootstrap';
 
 export class HPSuccessreg extends Component {
   
@@ -11,12 +11,12 @@ export class HPSuccessreg extends Component {
 
   render() {
       return (
+      <Container className = "App-containerLogin">
       <MuiThemeProvider>
-       
         <br/>
         <br/>
      
-        <Form style={{marginLeft:"0%", marginTop:"0%"}}>
+        <Form>
             <h2>Successfully Registered!</h2>
             <p>Thank you for Registering. Please Login</p>
 
@@ -27,8 +27,8 @@ export class HPSuccessreg extends Component {
                 >PROCEED TO LOGIN</Button>
             </div>
         </Form>  
-        
       </MuiThemeProvider>
+      </Container>
     );
 }
 }
