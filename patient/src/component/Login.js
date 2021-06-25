@@ -39,9 +39,9 @@ export class Login extends Component { //
                         <input type="password" className="form-control" placeholder="Enter password"  onChange={handleChange('passWord')} defaultValue={values.passWord} required/>
                     </div>
                     <br/>
-                    <LoginButton login = {login}    />
+                    <LoginButton login = {login} values = {values}/>
                     <br/>
-                    <p className="App-link">        
+                    <p className="App-link">    
                         <a class = "link-success" href="./ForgetPassword" onClick = {this.forgetPass}>Forget Password?</a>
                         <br/>
                         <a class = "link-success" href="./CreateAccount" onClick = {this.createAcc}>Don't have an account? Create Account</a>

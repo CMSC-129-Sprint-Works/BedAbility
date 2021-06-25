@@ -36,7 +36,7 @@ export class PatientInfo extends Component {
     </ListGroup>
     </div>
     <div class="d-grid gap-2 col-5 mx-auto">
-            <button type="submit" className="btn btn-success btn-lg" onClick  = {this.continue}>Edit Informations</button>
+            <button type="submit" className="btn btn-success btn-lg" onClick  = {this.continue}>Continue</button>
             <button type="submit" className="btn btn-success btn-lg" onClick  = {this.back}>Back to Hospital</button>
           </div><br/>
      </div>

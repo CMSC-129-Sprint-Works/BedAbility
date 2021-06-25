@@ -11,7 +11,16 @@ import SendCode from './SendCode'; //ask for user email and send code to verify 
 export class UserFormApp extends Component {
   state = {
     step: 1,
-
+    email:'',
+    passWord:'',
+    firstName: '',
+    lastName: '',
+    address: '',
+    position: '',
+    contactNumber: null,
+    birthDate: null,
+    code: null,
+    confirmPassword: '',
   };
 
   toCreateAccount = () => {

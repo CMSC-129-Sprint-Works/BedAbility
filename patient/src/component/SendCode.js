@@ -17,7 +17,7 @@ export class SendCode extends Component {
     return (
       <Container className = "App-container">
          <form className = "App-form">
-            <h3 className = "App-title">Enter Email Address for   Verification</h3>
+            <h3 className = "App-title">Enter Email Address for Verification</h3>
             <br/>
             <div className="form-group">
                 <input type="email" className="form-control" placeholder="Enter email"  onChange={handleChange('email')} defaultValue={values.email} required/>

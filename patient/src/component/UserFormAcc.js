@@ -57,17 +57,19 @@ export class Account extends Component {
     this.setState({ [input]: e.target.value });
   };  
 
+
   
   render() {
     const {errors} = this.state;
     const {step} = this.state;
-    const {passWord, firstName, lastName, address, birthDate, contactNumber, code, email, confirmPassword, currentTime, bedCount, symptoms, id} = this.state;
-    const values = {passWord, firstName, lastName, address, birthDate, contactNumber, code, email, confirmPassword, currentTime, bedCount, symptoms, id};
+    const {id, passWord, firstName, lastName, address, birthDate, contactNumber, code, email, confirmPassword, currentTime, bedCount, symptoms} = this.state;
+    const values = {id, passWord, firstName, lastName, address, birthDate, contactNumber, code, email, confirmPassword, currentTime, bedCount, symptoms};
     switch (step) {
       case 1:
         return (
           <BasicTable
             nextStep = {this.nextStep}
+            values = {values}
             handleChange={this.handleChange}
           />
         );

@@ -11,18 +11,7 @@ export class LoginControl extends Component {
     this.handleLogoutClick = this.handleLogoutClick.bind(this);
     this.state = {
       isLoggedIn: false,
-      email:'',
-      passWord:'',
-      firstName: '',
-      lastName: '',
-      address: '',
-      position: '',
-      contactNumber: null,
-      birthDate: null,
-      code: null,
-      confirmPassword: '',
-      symptoms: '',
-      currentTime : new Date().toLocaleTimeString(),};
+     };
   }
 
   handleLoginClick() {
@@ -39,24 +28,19 @@ export class LoginControl extends Component {
   
 
   render() {
-    const {passWord, firstName, lastName, address, birthDate, contactNumber, code, email, confirmPassword, symptoms, currentTime} = this.state;
-    const values = {passWord, firstName, lastName, address, birthDate, contactNumber, code, email, confirmPassword, symptoms, currentTime};
     const {isLoggedIn} = this.state;
 
  
     if (isLoggedIn) {
       return(
         <Account
-        values = {values}
-        handleChange = {this.handleChange}
+        handleLoginClick = {this.handleLoginClick}
         handleLogoutClick = {this.handleLogoutClick}
         />
       );
     } else {
       return(
         <Application
-        values = {values}
-        handleChange = {this.handleChange}
         handleLoginClick = {this.handleLoginClick}/>
       );
     }

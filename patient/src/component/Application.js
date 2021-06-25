@@ -8,7 +8,6 @@ export class Application extends Component {
     this.props.handleLoginClick();
   };
   render() {
-    const {values, handleChange} = this.props;
     return(
       <div>
         <Router>
@@ -38,8 +37,6 @@ export class Application extends Component {
                       </div>
                       <div class = "col-lg-5">
                         <UserFormApp 
-                        values = {values}
-                        handleChange = {this.handleChange}
                         login = {this.login}/>
                       </div>
                     </div>
