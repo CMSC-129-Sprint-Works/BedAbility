@@ -20,9 +20,9 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from './components/listItems';
 //import Chart from './components/Chart';
-import Deposits from './components/Deposits';
+import Bedcount from './components/Deposits';
 import Modify from './components/Modify';
-import Withdraw from './components/Withdraw';
+import Availcount from './components/Withdraw';
 import Orders from './components/Orders';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -223,13 +223,13 @@ export default function Dashboard({visible, onCancel, onOk, toDash, toReset, toV
             {/* Recent Deposits */}
             <Grid item xs={12} md={4} lg={4}>
               <Paper className={fixedHeightPaper}>
-                <Deposits />
+                <Bedcount />
               </Paper>
             </Grid>
             {/* Recent Deposits */}
             <Grid item xs={12} md={4} lg={4}>
               <Paper className={fixedHeightPaper}>
-                <Withdraw />
+                <Availcount />
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={4}>

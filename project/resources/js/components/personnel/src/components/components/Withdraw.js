@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Withdraw() {
+export default function Availcount() {
   const classes = useStyles();
   return (
     <React.Fragment>

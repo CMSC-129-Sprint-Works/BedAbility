@@ -30,10 +30,13 @@ export class DataSharingAgreement extends Component { //
       <Container className = "App-containerLogin">
       <MuiThemeProvider>
         <>
-        <p className = "App-title">Data Sharing Agreement</p>
-        <br/>
         <Form>
-           <p style={{ color: 'white' }} >This is Data Sharing Agreement. Please read. Agree to continue</p>
+        <div className = "App-text" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0"  tabindex="0">
+              <p>This data sharing agreement is made and entered by the user and the developer of this application. This is effective until the user deactivates his/her account. This data sharing agreement narrates how we process the information inputted for our BedAbility product presented by the UP Dormers Rawr.</p>
+            
+              <h4 id="scrollspyHeading2">Data Collection</h4>
+              <p>The data that the UP Dormers Rawr collected are those information that the user of this application had inputted including in the signing up for an account and in the admission request form. No information will be collected from the users of the application until they have agreed to the Data Sharing Agreement. We ensure that we will only require what is completely necessary for the application to perform its functions. </p>
+            </div>
             <br />
            <input type="checkbox" onChange = {this.txtChange.bind(this)}/>
             <em style={{ color: 'white' }}> I Agree to the Data Sharing Agreement <br/></em>
