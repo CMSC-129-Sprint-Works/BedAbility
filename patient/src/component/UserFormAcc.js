@@ -40,7 +40,7 @@ export class Account extends Component {
   // Go back to prev step
   prevStep = () => {
     const { step } = this.state;
-    if(step == 4){
+    if(step === 4){
       this.setState({
         step: step - 3
       });

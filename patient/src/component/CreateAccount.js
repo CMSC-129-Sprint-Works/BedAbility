@@ -92,7 +92,6 @@ export class CreateAccount extends Component {
                         placeholder="Enter your Password"
                         id = "passWord"
                         type = "password"
-                        id = "passwordID"
                         onChange={handleChange('passWord')} 
                         defaultValue={values.passWord}
                         required/>
