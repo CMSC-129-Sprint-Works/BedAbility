@@ -1,15 +1,15 @@
 [
     { "hospital_name":" ", "total_bed_capacity": " ", "current_bed_count": " " , "bed_availability_status": " "},
-    { "hospital_name":"Cebu Doctor's Hospital", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"A v a i l a b l e"},
-    { "hospital_name":"St. Vincent General Hospital", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"C r i t i c a l"},
-    { "hospital_name":"Sacred Heart Hospital", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"F u l l"},
-    { "hospital_name":"Cebu Velez General Hospital", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"A v a i l a b l e"},
-    { "hospital_name":"Vicente Sotto Memorial Medical Center", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"A v a i l a b l e"},
-    { "hospital_name":"Doctors Specialty Reactive Medical & Diagnostic", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"C r i t i c a l"},
-    { "hospital_name":"Cebu City Medical Center", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"A v a i l a b l e"},
-    { "hospital_name":"Perpetual Soccour Hospital", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"F u l l"},
-    { "hospital_name":"Metro – Cebu Community Hospital", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"A v a i l a b l e"},
-    { "hospital_name":"Visayas Community Medical Center", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"F u l l"},
-    { "hospital_name":"Miller Sanitarium & Hospital", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"A v a i l a b l e"},
-    { "hospital_name":"Vicente Gullas Memorial Hospital", "total_bed_capacity":0, "current_bed_count":0, "bed_availability_status":"C r i t i c a l"}
+    { "hospital_name":"9:05", "total_bed_capacity":"25 June, 2021", "current_bed_count": " Jason Reyes", "bed_availability_status":"39 yrs. old"},
+    { "hospital_name":"8:45", "total_bed_capacity":"25 June, 2021", "current_bed_count": " Nial Bonifacio", "bed_availability_status":"15 yrs. old"},
+    { "hospital_name":"5:00", "total_bed_capacity":"25 June, 2021", "current_bed_count": " Harry De Guzman", "bed_availability_status":"20 yrs. old"},
+    { "hospital_name":"4:45", "total_bed_capacity":"25 June, 2021", "current_bed_count": " Ariana Ibarra", "bed_availability_status":"45 yrs. old"},
+    { "hospital_name":"3:45", "total_bed_capacity":"25 June, 2021", "current_bed_count": " Jennie Olay", "bed_availability_status":"39 yrs. old"},
+    { "hospital_name":" ", "total_bed_capacity":" ", "current_bed_count": " ", "bed_availability_status":" "},
+    { "hospital_name":" ", "total_bed_capacity":" ", "current_bed_count": " ", "bed_availability_status":" "},
+    { "hospital_name":" ", "total_bed_capacity":" ", "current_bed_count": " ", "bed_availability_status":" "},
+    { "hospital_name":" ", "total_bed_capacity":" ", "current_bed_count": " ", "bed_availability_status":" "},
+    { "hospital_name":" ", "total_bed_capacity":" ", "current_bed_count": " ", "bed_availability_status":" "},
+    { "hospital_name":" ", "total_bed_capacity":" ", "current_bed_count": " ", "bed_availability_status":" "},
+    { "hospital_name":" ", "total_bed_capacity":" ", "current_bed_count": " ", "bed_availability_status":" "}
 ]
